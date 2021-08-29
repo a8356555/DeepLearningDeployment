@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/content/csrc/serialize_engine_from_onnx/src/trt_parse_onnx_N_save.cpp
+iostream
+-
+fstream
+-
+vector
+-
+string
+-
+NvInfer.h
+-
+NvOnnxParser.h
+-
+

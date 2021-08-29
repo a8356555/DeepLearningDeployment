@@ -1,0 +1,5 @@
+/content/csrc/serialize_engine_from_onnx/build/CMakeFiles/rebuild_cache.dir
+/content/csrc/serialize_engine_from_onnx/build/CMakeFiles/edit_cache.dir
+/content/csrc/serialize_engine_from_onnx/build/src/CMakeFiles/rebuild_cache.dir
+/content/csrc/serialize_engine_from_onnx/build/src/CMakeFiles/edit_cache.dir
+/content/csrc/serialize_engine_from_onnx/build/src/CMakeFiles/trt_serialize.dir

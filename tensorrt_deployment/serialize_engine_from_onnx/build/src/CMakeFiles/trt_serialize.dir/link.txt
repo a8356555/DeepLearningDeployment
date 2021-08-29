@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall   CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.o  -o ../../bin/trt_serialize 
