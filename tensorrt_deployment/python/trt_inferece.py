@@ -110,7 +110,7 @@ def postprocess_trt(trt_outputs):
 
 def make_parser():
     parser = ArgumentParser(
-        description=f"usage {__file__} -i path/to/ur/image -o path/to/ur/onnx/file")    
+        description=f"usage ./{__file__} -i path/to/ur/image -o path/to/ur/onnx/file")    
     parser.add_argument(
         '--image-path', '-i', type=str, default='',
         help='/path/to/ur/image/or/image')

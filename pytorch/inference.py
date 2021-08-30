@@ -34,9 +34,9 @@ def get_model():
 
 def make_parser():
     parser = ArgumentParser(
-        description=f"usage {__file__} -i path/to/ur/image")    
+        description=f"usage ./{__file__} -i path/to/ur/image")    
     parser.add_argument(
-        '--image-path', '-i', type=str, default='',
+        '--image-path', '-i', type=str,
         help='/path/to/ur/image/or/image')
     return parser
     
