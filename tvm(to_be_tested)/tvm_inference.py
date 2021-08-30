@@ -9,18 +9,25 @@ from tvm.contrib import graph_executor
 
 from argparse import ArgumentParser
 
+def build_inference_vm():
+    #TODO
+    # # onnx / keras
+    with tvm.transform.PassContext(opt_level=3, disabled_pass=["FoldScaleAxis"]):
+        intrp = relay.build_module.create_executor("vm", mod, tvm.cpu(0), cfg.target)    
+    return intrp
+
 
 def build_inference_module_from_auto_tuning(mod, params, graph_opt_sch_file, target, dev):
     with autotvm.apply_graph_best(graph_opt_sch_file):
         print("Compile...")
         with tvm.transform.PassContext(opt_level=3):
             lib = relay.build_module.build(mod, target=target, params=params)
-
-            # upload parameters to device
+            
     module = runtime.GraphModule(lib["default"](dev))
     return module
 
 def build_inference_module_from_auto_scheduling(mod, params, json_file, target, dev):
+    # # pytorch / tf / mxnet / tflite / coreml / darknet / caffe
     with auto_scheduler.ApplyHistoryBest(json_file):
         with tvm.transform.PassContext(opt_level=3, config={"relay.backend.use_auto_scheduler": True}):
             lib = relay.build(mod, target=target, params=params)
@@ -49,12 +56,15 @@ def preprocess_tvm(image):
 
 def postprocess_tvm(outputs):
     return outputs.asnumpy()[0]
-        
 
 def tvm_inference(img):
     module.set_input(cfg.input_name, tvm.nd.array(img.astype(cfg.dtype)))
     module.run()
     tvm_output = m.get_output(0)
+    return tvm_output
+
+def tvm_vm_inference(img):
+    tvm_output = intrp.evaluate()(tvm.nd.array(img.astype(cfg.dtype)), **params)
     return tvm_output
 
 def make_parser():
@@ -67,7 +77,9 @@ def make_parser():
         '--using-file', '-u', type=str, choices=["log", "json"]
         help='using .log for auto-tuned module, using .json for auto-scheduled one')
     return parser           
-    
+
+# with tvm.transform.PassContext(opt_level=3, disabled_pass=["FoldScaleAxis"]):
+#     lib = relay.build(mod, target=target, params=params)    
 if __name__ == "__main__":
     parser = make_parser()
     args = parser.parse_args()
