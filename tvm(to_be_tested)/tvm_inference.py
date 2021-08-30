@@ -78,8 +78,6 @@ def make_parser():
         help='using .log for auto-tuned module, using .json for auto-scheduled one')
     return parser           
 
-# with tvm.transform.PassContext(opt_level=3, disabled_pass=["FoldScaleAxis"]):
-#     lib = relay.build(mod, target=target, params=params)    
 if __name__ == "__main__":
     parser = make_parser()
     args = parser.parse_args()
