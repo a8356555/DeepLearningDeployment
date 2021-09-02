@@ -8,7 +8,7 @@ import time
 
 
     
-def get_and_check_onnx_sesson(model_path):
+def get_and_check_onnx_session(model_path):
     import onnx
     onnx_model = onnx.load(model_path)
     onnx.checker.check_model(onnx_model)

@@ -73,6 +73,8 @@ void preProcessImage(const std::string& image_path, float* gpu_input, const nvin
     cv::cvtColor(frame, frame, cv::COLOR_BGR2RGB);
     int h = frame.rows;
     int w = frame.cols;
+    int target_h = 224;
+    int target_w = 224;
     int dh_half, dw_half;
     if (h > w) {
         dh_half = static_cast<int>(0.1*h/2);
@@ -96,7 +98,7 @@ void preProcessImage(const std::string& image_path, float* gpu_input, const nvin
     cuda::resize(gpu_frame, gpu_frame, target_size);
     
     // crop
-    cv::Rect ROI(12, 12, 236, 236);
+    cv::Rect ROI(12, 12, target_h, target_w);
     gpu_frame = gpu_frame(ROI).clone();
 
     // normalize
