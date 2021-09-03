@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/content/csrc/serialize_engine_from_onnx/src/trt_parse_onnx_N_save.cpp" "/content/csrc/serialize_engine_from_onnx/build/src/CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.o"
+  "/content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/src/trt_parse_onnx_N_save.cpp" "/content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build/src/CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

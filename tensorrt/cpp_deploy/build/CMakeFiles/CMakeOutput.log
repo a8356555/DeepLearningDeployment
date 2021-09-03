@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/content/DeepLearningDeploymen
 Determining if the C compiler works passed with the following output:
 Change Dir: /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2710c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2710c.dir/build.make CMakeFiles/cmTC_2710c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b81c0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b81c0.dir/build.make CMakeFiles/cmTC_b81c0.dir/build
 make[1]: Entering directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2710c.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_2710c.dir/testCCompiler.c.o   -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_2710c
-/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2710c.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_2710c.dir/testCCompiler.c.o  -o cmTC_2710c 
+Building C object CMakeFiles/cmTC_b81c0.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_b81c0.dir/testCCompiler.c.o   -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_b81c0
+/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b81c0.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_b81c0.dir/testCCompiler.c.o  -o cmTC_b81c0 
 make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ad207/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ad207.dir/build.make CMakeFiles/cmTC_ad207.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_28b41/fast"
+/usr/bin/make -f CMakeFiles/cmTC_28b41.dir/build.make CMakeFiles/cmTC_28b41.dir/build
 make[1]: Entering directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ad207.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_ad207.dir/CMakeCCompilerABI.c.o   -c /usr/local/lib/python2.7/dist-packages/cmake/data/share/cmake-3.12/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_ad207
-/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad207.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_ad207.dir/CMakeCCompilerABI.c.o  -o cmTC_ad207 
+Building C object CMakeFiles/cmTC_28b41.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_28b41.dir/CMakeCCompilerABI.c.o   -c /usr/local/lib/python2.7/dist-packages/cmake/data/share/cmake-3.12/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_28b41
+/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28b41.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_28b41.dir/CMakeCCompilerABI.c.o  -o cmTC_28b41 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -61,9 +61,9 @@ Thread model: posix
 gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/local/cuda/lib64/stubs/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ad207' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccznPGM7.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ad207 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/local/cuda/lib64/stubs -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_ad207.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ad207' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_28b41' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccgKNpdb.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_28b41 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/local/cuda/lib64/stubs -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_28b41.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_28b41' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
 
 
@@ -71,14 +71,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_ad207/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_ad207.dir/build.make CMakeFiles/cmTC_ad207.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_28b41/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_28b41.dir/build.make CMakeFiles/cmTC_28b41.dir/build]
   ignore line: [make[1]: Entering directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_ad207.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_ad207.dir/CMakeCCompilerABI.c.o   -c /usr/local/lib/python2.7/dist-packages/cmake/data/share/cmake-3.12/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_ad207]
-  ignore line: [/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad207.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_ad207.dir/CMakeCCompilerABI.c.o  -o cmTC_ad207 ]
+  ignore line: [Building C object CMakeFiles/cmTC_28b41.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_28b41.dir/CMakeCCompilerABI.c.o   -c /usr/local/lib/python2.7/dist-packages/cmake/data/share/cmake-3.12/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_28b41]
+  ignore line: [/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28b41.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_28b41.dir/CMakeCCompilerABI.c.o  -o cmTC_28b41 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/local/cuda/lib64/stubs/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ad207' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccznPGM7.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ad207 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/local/cuda/lib64/stubs -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_ad207.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_28b41' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccgKNpdb.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_28b41 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/local/cuda/lib64/stubs -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_28b41.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccznPGM7.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccgKNpdb.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -115,7 +115,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_ad207] ==> ignore
+    arg [cmTC_28b41] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -128,7 +128,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/local/cuda/lib64/stubs] ==> dir [/usr/local/cuda/lib64/stubs]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_ad207.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_28b41.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -161,14 +161,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1af3e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1af3e.dir/build.make CMakeFiles/cmTC_1af3e.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_870d9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_870d9.dir/build.make CMakeFiles/cmTC_870d9.dir/build
 make[1]: Entering directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1af3e.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_1af3e.dir/feature_tests.c.o   -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_1af3e
-/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1af3e.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_1af3e.dir/feature_tests.c.o  -o cmTC_1af3e 
+Building C object CMakeFiles/cmTC_870d9.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_870d9.dir/feature_tests.c.o   -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_870d9
+/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_870d9.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_870d9.dir/feature_tests.c.o  -o cmTC_870d9 
 make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
 
 
@@ -181,14 +181,14 @@ make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1fb39/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1fb39.dir/build.make CMakeFiles/cmTC_1fb39.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_9ab33/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9ab33.dir/build.make CMakeFiles/cmTC_9ab33.dir/build
 make[1]: Entering directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1fb39.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_1fb39.dir/feature_tests.c.o   -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_1fb39
-/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1fb39.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_1fb39.dir/feature_tests.c.o  -o cmTC_1fb39 
+Building C object CMakeFiles/cmTC_9ab33.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_9ab33.dir/feature_tests.c.o   -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_9ab33
+/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ab33.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_9ab33.dir/feature_tests.c.o  -o cmTC_9ab33 
 make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
 
 
@@ -201,14 +201,14 @@ make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0e4a9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0e4a9.dir/build.make CMakeFiles/cmTC_0e4a9.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b7f0c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b7f0c.dir/build.make CMakeFiles/cmTC_b7f0c.dir/build
 make[1]: Entering directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0e4a9.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_0e4a9.dir/feature_tests.c.o   -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_0e4a9
-/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e4a9.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_0e4a9.dir/feature_tests.c.o  -o cmTC_0e4a9 
+Building C object CMakeFiles/cmTC_b7f0c.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_b7f0c.dir/feature_tests.c.o   -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_b7f0c
+/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7f0c.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_b7f0c.dir/feature_tests.c.o  -o cmTC_b7f0c 
 make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
 
 
@@ -219,28 +219,28 @@ make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d7f46/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d7f46.dir/build.make CMakeFiles/cmTC_d7f46.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_5eabe/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5eabe.dir/build.make CMakeFiles/cmTC_5eabe.dir/build
 make[1]: Entering directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d7f46.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_d7f46.dir/testCXXCompiler.cxx.o -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_d7f46
-/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d7f46.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_d7f46.dir/testCXXCompiler.cxx.o  -o cmTC_d7f46 
+Building CXX object CMakeFiles/cmTC_5eabe.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_5eabe.dir/testCXXCompiler.cxx.o -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_5eabe
+/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5eabe.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_5eabe.dir/testCXXCompiler.cxx.o  -o cmTC_5eabe 
 make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9c6a9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9c6a9.dir/build.make CMakeFiles/cmTC_9c6a9.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_d3299/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d3299.dir/build.make CMakeFiles/cmTC_d3299.dir/build
 make[1]: Entering directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_9c6a9.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_9c6a9.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/lib/python2.7/dist-packages/cmake/data/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_9c6a9
-/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c6a9.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_9c6a9.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_9c6a9 
+Building CXX object CMakeFiles/cmTC_d3299.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_d3299.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/lib/python2.7/dist-packages/cmake/data/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_d3299
+/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3299.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_d3299.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d3299 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -252,9 +252,9 @@ Thread model: posix
 gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/local/cuda/lib64/stubs/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_9c6a9' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccglBLSC.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_9c6a9 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/local/cuda/lib64/stubs -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_9c6a9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_9c6a9' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d3299' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKlF9vB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_d3299 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/local/cuda/lib64/stubs -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_d3299.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d3299' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
 
 
@@ -262,14 +262,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_9c6a9/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_9c6a9.dir/build.make CMakeFiles/cmTC_9c6a9.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_d3299/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_d3299.dir/build.make CMakeFiles/cmTC_d3299.dir/build]
   ignore line: [make[1]: Entering directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_9c6a9.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_9c6a9.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/lib/python2.7/dist-packages/cmake/data/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_9c6a9]
-  ignore line: [/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c6a9.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_9c6a9.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_9c6a9 ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_d3299.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_d3299.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/lib/python2.7/dist-packages/cmake/data/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_d3299]
+  ignore line: [/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3299.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_d3299.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d3299 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -281,13 +281,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/local/cuda/lib64/stubs/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_9c6a9' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccglBLSC.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_9c6a9 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/local/cuda/lib64/stubs -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_9c6a9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d3299' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKlF9vB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_d3299 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/local/cuda/lib64/stubs -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_d3299.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccglBLSC.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccKlF9vB.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -306,7 +306,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_9c6a9] ==> ignore
+    arg [cmTC_d3299] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -319,7 +319,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/local/cuda/lib64/stubs] ==> dir [/usr/local/cuda/lib64/stubs]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_9c6a9.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_d3299.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -348,14 +348,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2ff00/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2ff00.dir/build.make CMakeFiles/cmTC_2ff00.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_45486/fast"
+/usr/bin/make -f CMakeFiles/cmTC_45486.dir/build.make CMakeFiles/cmTC_45486.dir/build
 make[1]: Entering directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2ff00.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_2ff00.dir/feature_tests.cxx.o -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_2ff00
-/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ff00.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_2ff00.dir/feature_tests.cxx.o  -o cmTC_2ff00 
+Building CXX object CMakeFiles/cmTC_45486.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_45486.dir/feature_tests.cxx.o -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_45486
+/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45486.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_45486.dir/feature_tests.cxx.o  -o cmTC_45486 
 make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
 
 
@@ -421,14 +421,14 @@ make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b4bbf/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b4bbf.dir/build.make CMakeFiles/cmTC_b4bbf.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_74308/fast"
+/usr/bin/make -f CMakeFiles/cmTC_74308.dir/build.make CMakeFiles/cmTC_74308.dir/build
 make[1]: Entering directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b4bbf.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_b4bbf.dir/feature_tests.cxx.o -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_b4bbf
-/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4bbf.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_b4bbf.dir/feature_tests.cxx.o  -o cmTC_b4bbf 
+Building CXX object CMakeFiles/cmTC_74308.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_74308.dir/feature_tests.cxx.o -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_74308
+/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74308.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_74308.dir/feature_tests.cxx.o  -o cmTC_74308 
 make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
 
 
@@ -494,14 +494,14 @@ make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c1a7f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c1a7f.dir/build.make CMakeFiles/cmTC_c1a7f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_5d9da/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5d9da.dir/build.make CMakeFiles/cmTC_5d9da.dir/build
 make[1]: Entering directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c1a7f.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_c1a7f.dir/feature_tests.cxx.o -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_c1a7f
-/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c1a7f.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_c1a7f.dir/feature_tests.cxx.o  -o cmTC_c1a7f 
+Building CXX object CMakeFiles/cmTC_5d9da.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_5d9da.dir/feature_tests.cxx.o -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_5d9da
+/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d9da.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_5d9da.dir/feature_tests.cxx.o  -o cmTC_5d9da 
 make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
 
 
@@ -567,14 +567,14 @@ make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_cb10b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_cb10b.dir/build.make CMakeFiles/cmTC_cb10b.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ed07a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ed07a.dir/build.make CMakeFiles/cmTC_ed07a.dir/build
 make[1]: Entering directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_cb10b.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_cb10b.dir/feature_tests.cxx.o -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_cb10b
-/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb10b.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_cb10b.dir/feature_tests.cxx.o  -o cmTC_cb10b 
+Building CXX object CMakeFiles/cmTC_ed07a.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_ed07a.dir/feature_tests.cxx.o -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_ed07a
+/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed07a.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_ed07a.dir/feature_tests.cxx.o  -o cmTC_ed07a 
 make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
 
 
@@ -638,28 +638,28 @@ make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5f4f2/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5f4f2.dir/build.make CMakeFiles/cmTC_5f4f2.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e9aa4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e9aa4.dir/build.make CMakeFiles/cmTC_e9aa4.dir/build
 make[1]: Entering directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5f4f2.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -fPIC    -o CMakeFiles/cmTC_5f4f2.dir/CheckIncludeFile.c.o   -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_5f4f2
-/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5f4f2.dir/link.txt --verbose=1
-/usr/bin/cc -fPIC     CMakeFiles/cmTC_5f4f2.dir/CheckIncludeFile.c.o  -o cmTC_5f4f2 
+Building C object CMakeFiles/cmTC_e9aa4.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -fPIC    -o CMakeFiles/cmTC_e9aa4.dir/CheckIncludeFile.c.o   -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e9aa4
+/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e9aa4.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC     CMakeFiles/cmTC_e9aa4.dir/CheckIncludeFile.c.o  -o cmTC_e9aa4 
 make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_561b9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_561b9.dir/build.make CMakeFiles/cmTC_561b9.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_d2fb3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d2fb3.dir/build.make CMakeFiles/cmTC_d2fb3.dir/build
 make[1]: Entering directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_561b9.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_561b9.dir/CheckFunctionExists.c.o   -c /usr/local/lib/python2.7/dist-packages/cmake/data/share/cmake-3.12/Modules/CheckFunctionExists.c
-Linking C executable cmTC_561b9
-/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_561b9.dir/link.txt --verbose=1
-/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_561b9.dir/CheckFunctionExists.c.o  -o cmTC_561b9 -lpthread 
+Building C object CMakeFiles/cmTC_d2fb3.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d2fb3.dir/CheckFunctionExists.c.o   -c /usr/local/lib/python2.7/dist-packages/cmake/data/share/cmake-3.12/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d2fb3
+/usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2fb3.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_d2fb3.dir/CheckFunctionExists.c.o  -o cmTC_d2fb3 -lpthread 
 make[1]: Leaving directory '/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles/CMakeTmp'
 
 

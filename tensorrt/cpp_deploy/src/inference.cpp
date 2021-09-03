@@ -123,7 +123,7 @@ void postProcessResults(float* gpu_output, float* p_cpu_output[], const nvinfer1
 {
     // auto classes = getClassNames("imagenet_classes.txt");
     int class_num = 801;
-    cudaMemcpy(*p_cpu_output, gpu_output, cpu_output.size() * sizeof(float), cudaMemcpyDeviceToHost);
+    cudaMemcpy(*p_cpu_output, gpu_output, class_num * sizeof(float), cudaMemcpyDeviceToHost);
         
     // calculate softmax
     /* std::transform(cpu_output.begin(), cpu_output.end(), cpu_output.begin(), [](float val){return std::exp(val);});
@@ -209,7 +209,7 @@ void buildTRTEngineContextBuffer(
     return;
 }
 
-void predict(const std::string& engine_path, const std::string& image_path) 
+void predict(const std::string& engine_path, const std::string& image_path, float* p_cpu_output[]) 
 {
     int batch_size = 1;
     nvinfer1::ICudaEngine* engine{nullptr};
@@ -222,14 +222,14 @@ void predict(const std::string& engine_path, const std::string& image_path)
     preProcessImage(image_path, (float*)buffers[0], input_dims[0]);
     context->enqueue(batch_size, buffers.data(), 0, nullptr);
     
-    std::vector<float> cpu_output((getSizeByDim(output_dims[0])*batch_size));        
-    postProcessResults((float*)buffers[1], cpu_output, output_dims[0], batch_size);
+    // std::vector<float> cpu_output((getSizeByDim(output_dims[0])*batch_size));        
+    postProcessResults((float*)buffers[1], p_cpu_output, output_dims[0], batch_size);
 
     for (void* buf:buffers)
     {
         cudaFree(buf);
     }
-    return cpu_output;
+    return;
 }
 
 void evaluate_predict_speed(const std::string& engine_path, const std::string& image_path, float* p_cpu_output[], unsigned int test_num)

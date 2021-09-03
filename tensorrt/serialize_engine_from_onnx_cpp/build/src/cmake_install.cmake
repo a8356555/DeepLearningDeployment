@@ -1,4 +1,4 @@
-# Install script for directory: /content/csrc/serialize_engine_from_onnx/src
+# Install script for directory: /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -48,10 +48,10 @@ RM = /usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /content/csrc/serialize_engine_from_onnx
+CMAKE_SOURCE_DIR = /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /content/csrc/serialize_engine_from_onnx/build
+CMAKE_BINARY_DIR = /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /content/csrc/serialize_engine_from_onnx/build && $(CMAKE_COMMAND) -E cmake_progress_start /content/csrc/serialize_engine_from_onnx/build/CMakeFiles /content/csrc/serialize_engine_from_onnx/build/src/CMakeFiles/progress.marks
-	cd /content/csrc/serialize_engine_from_onnx/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /content/csrc/serialize_engine_from_onnx/build/CMakeFiles 0
+	cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build && $(CMAKE_COMMAND) -E cmake_progress_start /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build/CMakeFiles /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build/src/CMakeFiles/progress.marks
+	cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /content/csrc/serialize_engine_from_onnx/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /content/csrc/serialize_engine_from_onnx/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /content/csrc/serialize_engine_from_onnx/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /content/csrc/serialize_engine_from_onnx/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/trt_serialize.dir/rule:
-	cd /content/csrc/serialize_engine_from_onnx/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/trt_serialize.dir/rule
+	cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/trt_serialize.dir/rule
 .PHONY : src/CMakeFiles/trt_serialize.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ trt_serialize: src/CMakeFiles/trt_serialize.dir/rule
 
 # fast build rule for target.
 trt_serialize/fast:
-	cd /content/csrc/serialize_engine_from_onnx/build && $(MAKE) -f src/CMakeFiles/trt_serialize.dir/build.make src/CMakeFiles/trt_serialize.dir/build
+	cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build && $(MAKE) -f src/CMakeFiles/trt_serialize.dir/build.make src/CMakeFiles/trt_serialize.dir/build
 .PHONY : trt_serialize/fast
 
 trt_parse_onnx_N_save.o: trt_parse_onnx_N_save.cpp.o
@@ -131,7 +131,7 @@ trt_parse_onnx_N_save.o: trt_parse_onnx_N_save.cpp.o
 
 # target to build an object file
 trt_parse_onnx_N_save.cpp.o:
-	cd /content/csrc/serialize_engine_from_onnx/build && $(MAKE) -f src/CMakeFiles/trt_serialize.dir/build.make src/CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.o
+	cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build && $(MAKE) -f src/CMakeFiles/trt_serialize.dir/build.make src/CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.o
 .PHONY : trt_parse_onnx_N_save.cpp.o
 
 trt_parse_onnx_N_save.i: trt_parse_onnx_N_save.cpp.i
@@ -140,7 +140,7 @@ trt_parse_onnx_N_save.i: trt_parse_onnx_N_save.cpp.i
 
 # target to preprocess a source file
 trt_parse_onnx_N_save.cpp.i:
-	cd /content/csrc/serialize_engine_from_onnx/build && $(MAKE) -f src/CMakeFiles/trt_serialize.dir/build.make src/CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.i
+	cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build && $(MAKE) -f src/CMakeFiles/trt_serialize.dir/build.make src/CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.i
 .PHONY : trt_parse_onnx_N_save.cpp.i
 
 trt_parse_onnx_N_save.s: trt_parse_onnx_N_save.cpp.s
@@ -149,7 +149,7 @@ trt_parse_onnx_N_save.s: trt_parse_onnx_N_save.cpp.s
 
 # target to generate assembly for a file
 trt_parse_onnx_N_save.cpp.s:
-	cd /content/csrc/serialize_engine_from_onnx/build && $(MAKE) -f src/CMakeFiles/trt_serialize.dir/build.make src/CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.s
+	cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build && $(MAKE) -f src/CMakeFiles/trt_serialize.dir/build.make src/CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.s
 .PHONY : trt_parse_onnx_N_save.cpp.s
 
 # Help Target
@@ -175,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /content/csrc/serialize_engine_from_onnx/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

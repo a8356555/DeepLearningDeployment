@@ -43,10 +43,10 @@ RM = /usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /content/csrc/serialize_engine_from_onnx
+CMAKE_SOURCE_DIR = /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /content/csrc/serialize_engine_from_onnx/build
+CMAKE_BINARY_DIR = /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/trt_serialize.dir/depend.make
@@ -59,16 +59,16 @@ include src/CMakeFiles/trt_serialize.dir/flags.make
 
 src/CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.o: src/CMakeFiles/trt_serialize.dir/flags.make
 src/CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.o: ../src/trt_parse_onnx_N_save.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/content/csrc/serialize_engine_from_onnx/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.o"
-	cd /content/csrc/serialize_engine_from_onnx/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.o -c /content/csrc/serialize_engine_from_onnx/src/trt_parse_onnx_N_save.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.o"
+	cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.o -c /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/src/trt_parse_onnx_N_save.cpp
 
 src/CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.i"
-	cd /content/csrc/serialize_engine_from_onnx/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /content/csrc/serialize_engine_from_onnx/src/trt_parse_onnx_N_save.cpp > CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.i
+	cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/src/trt_parse_onnx_N_save.cpp > CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.i
 
 src/CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.s"
-	cd /content/csrc/serialize_engine_from_onnx/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /content/csrc/serialize_engine_from_onnx/src/trt_parse_onnx_N_save.cpp -o CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.s
+	cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/src/trt_parse_onnx_N_save.cpp -o CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.s
 
 # Object files for target trt_serialize
 trt_serialize_OBJECTS = \
@@ -79,9 +79,14 @@ trt_serialize_EXTERNAL_OBJECTS =
 
 ../bin/trt_serialize: src/CMakeFiles/trt_serialize.dir/trt_parse_onnx_N_save.cpp.o
 ../bin/trt_serialize: src/CMakeFiles/trt_serialize.dir/build.make
+../bin/trt_serialize: /content/TensorRT-8.0.1.6/lib/libnvcaffe_parser.so
+../bin/trt_serialize: /content/TensorRT-8.0.1.6/lib/libnvinfer.so
+../bin/trt_serialize: /content/TensorRT-8.0.1.6/lib/libnvinfer_plugin.so
+../bin/trt_serialize: /content/TensorRT-8.0.1.6/lib/libnvonnxparser.so
+../bin/trt_serialize: /content/TensorRT-8.0.1.6/lib/libnvparsers.so
 ../bin/trt_serialize: src/CMakeFiles/trt_serialize.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/content/csrc/serialize_engine_from_onnx/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/trt_serialize"
-	cd /content/csrc/serialize_engine_from_onnx/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/trt_serialize.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/trt_serialize"
+	cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/trt_serialize.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/trt_serialize.dir/build: ../bin/trt_serialize
@@ -89,10 +94,10 @@ src/CMakeFiles/trt_serialize.dir/build: ../bin/trt_serialize
 .PHONY : src/CMakeFiles/trt_serialize.dir/build
 
 src/CMakeFiles/trt_serialize.dir/clean:
-	cd /content/csrc/serialize_engine_from_onnx/build/src && $(CMAKE_COMMAND) -P CMakeFiles/trt_serialize.dir/cmake_clean.cmake
+	cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build/src && $(CMAKE_COMMAND) -P CMakeFiles/trt_serialize.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/trt_serialize.dir/clean
 
 src/CMakeFiles/trt_serialize.dir/depend:
-	cd /content/csrc/serialize_engine_from_onnx/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /content/csrc/serialize_engine_from_onnx /content/csrc/serialize_engine_from_onnx/src /content/csrc/serialize_engine_from_onnx/build /content/csrc/serialize_engine_from_onnx/build/src /content/csrc/serialize_engine_from_onnx/build/src/CMakeFiles/trt_serialize.dir/DependInfo.cmake --color=$(COLOR)
+	cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/src /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build/src /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build/src/CMakeFiles/trt_serialize.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/trt_serialize.dir/depend
 

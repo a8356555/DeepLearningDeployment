@@ -1,4 +1,4 @@
-# Install script for directory: /content/csrc/serialize_engine_from_onnx
+# Install script for directory: /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/content/csrc/serialize_engine_from_onnx/build/src/cmake_install.cmake")
+  include("/content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build/src/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/content/csrc/serialize_engine_from_onnx/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

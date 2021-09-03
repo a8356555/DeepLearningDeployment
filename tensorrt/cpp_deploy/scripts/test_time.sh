@@ -1,12 +1,12 @@
 #!/bin/bash
-cd /content/YuShanAICompetition/csrc/serialize_engine_from_onnx/bin
+cd /content/DeepLearningDeployment/tensorrt/serialize_engine_from_onnx_cpp/bin
 for MODEL in resnet101 resnet50 efficientnet-b4 efficientnet-b5 efficientnet-b6 efficientnet-b7
 do
     echo $MODEL
     ./trt_serialize /content/$MODEL.onnx /content/$MODEL.trt
 done
 
-cd /content/YuShanAICompetition/csrc/deploy_gpu/bin
+cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/bin
 for MODEL in resnet101 resnet50 efficientnet-b4 efficientnet-b5 efficientnet-b6 efficientnet-b7
 do
     echo $MODEL
