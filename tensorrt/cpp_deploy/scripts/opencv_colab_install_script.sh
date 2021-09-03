@@ -25,7 +25,7 @@ echo "Procced with the installation"
 cd opencv-4.5.2
 mkdir build
 cd build
-
+# see GPU compute capability (version) first
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D CMAKE_INSTALL_PREFIX=/usr/local \
 -D WITH_TBB=ON \
@@ -36,7 +36,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D BUILD_opencv_cudacodec=OFF \
 -D WITH_CUDNN=ON \
 -D OPENCV_DNN_CUDA=ON \
--D CUDA_ARCH_BIN=7.5 \
+-D CUDA_ARCH_BIN=3.7 \
 -D WITH_V4L=ON \
 -D WITH_QT=OFF \
 -D WITH_OPENGL=ON \

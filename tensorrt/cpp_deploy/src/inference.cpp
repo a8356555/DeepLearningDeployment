@@ -23,7 +23,6 @@
 #include "inference.h"
 
 using namespace cv;
-using namespace cv::cuda;
 using cv::cuda::GpuMat;
 // trt logger
 
@@ -73,8 +72,8 @@ void preProcessImage(const std::string& image_path, float* gpu_input, const nvin
     cv::cvtColor(frame, frame, cv::COLOR_BGR2RGB);
     int h = frame.rows;
     int w = frame.cols;
-    int target_h = 224;
-    int target_w = 224;
+    int t_h = 224;
+    int t_w = 224;
     int dh_half, dw_half;
     if (h > w) {
         dh_half = static_cast<int>(0.1*h/2);
@@ -85,29 +84,24 @@ void preProcessImage(const std::string& image_path, float* gpu_input, const nvin
     }
     GpuMat gpu_frame;
     gpu_frame.upload(frame);
-    
-    // copymakeborder
-    cuda::copyMakeBorder(gpu_frame, gpu_frame, dh_half, dh_half, dw_half, dw_half, cv::BORDER_REPLICATE);
 
-    // resize
     auto input_width = dims.d[2];
     auto input_height = dims.d[1];
     auto channels = dims.d[0];
     auto input_size = cv::Size(input_width, input_height);
-    auto target_size = cv::Size(248, 248);
-    cuda::resize(gpu_frame, gpu_frame, target_size);
     
-    // crop
-    cv::Rect ROI(12, 12, target_h, target_w);
-    gpu_frame = gpu_frame(ROI).clone();
+    cuda::copyMakeBorder(gpu_frame, gpu_frame, dh_half, dh_half, dw_half, dw_half, cv::BORDER_REPLICATE);
+    auto size = cv::Size(248, 248);
+    cuda::resize(gpu_frame, gpu_frame, size);
+    gpu_frame.convertTo(gpu_frame, CV_32FC3, 1.f/255.f);
+    cv::Rect ROI(12, 12, t_h, t_w);
 
-    // normalize
-    /*gpu_frame.convertTo(gpu_frame, cv::CV_32FC3, 1.f/255.f);
-    gpu_frame = cuda::subtract(gpu_frame, cv::Scalar(0.485f, 0.456f, 0.406f), gpu_frame);
-    gpu_frame = cuda::divide(gpu_frame, cv::Scalar(0.229f, 0.224f, 0.225f), gpu_grame);*/
+    gpu_frame = gpu_frame(ROI).clone();
+    // // normalize
+    // gpu_frame = cuda::subtract(gpu_frame, cv::Scalar(0.485f, 0.456f, 0.406f), gpu_frame);
+    // gpu_frame = cuda::divide(gpu_frame, cv::Scalar(0.229f, 0.224f, 0.225f), gpu_grame);
     
     std::vector<GpuMat> chw;
-
     // copy processed data to gpu_input channel by channel using pointer
     // 1) pass pointer into vector 2) split processed image into vector     
     for (size_t i=0; i<channels; ++i)
@@ -234,6 +228,13 @@ void predict(const std::string& engine_path, const std::string& image_path, floa
 
 void evaluate_predict_speed(const std::string& engine_path, const std::string& image_path, float* p_cpu_output[], unsigned int test_num)
 {
+
+    int driverVersion = 0, runtimeVersion = 0;
+    cudaError_t e = cudaDriverGetVersion(&driverVersion);
+    e = cudaRuntimeGetVersion(&runtimeVersion);
+    if (runtimeVersion > driverVersion) 
+    std::cout << "Update driver to a version which supports CUDA: " << runtimeVersion << std::endl;
+
     int batch_size = 1;
     nvinfer1::ICudaEngine* engine{nullptr};
     nvinfer1::IExecutionContext* context{nullptr};
@@ -242,6 +243,8 @@ void evaluate_predict_speed(const std::string& engine_path, const std::string& i
     std::vector<void*> buffers;
     buildTRTEngineContextBuffer(batch_size, engine_path, engine, context, input_dims, output_dims, buffers);
     
+
+
     auto t_start = std::chrono::high_resolution_clock::now();
     for (int i=0; i<test_num; i++) {
         // std::vector<float> cpu_output((getSizeByDim(output_dims[0])*batch_size));
