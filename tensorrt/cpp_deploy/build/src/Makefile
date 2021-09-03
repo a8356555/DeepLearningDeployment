@@ -48,10 +48,10 @@ RM = /usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /content/YuShanAICompetition/csrc/deploy_gpu
+CMAKE_SOURCE_DIR = /content/DeepLearningDeployment/tensorrt/cpp_deploy
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /content/YuShanAICompetition/csrc/deploy_gpu/build
+CMAKE_BINARY_DIR = /content/DeepLearningDeployment/tensorrt/cpp_deploy/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build && $(CMAKE_COMMAND) -E cmake_progress_start /content/YuShanAICompetition/csrc/deploy_gpu/build/CMakeFiles /content/YuShanAICompetition/csrc/deploy_gpu/build/src/CMakeFiles/progress.marks
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /content/YuShanAICompetition/csrc/deploy_gpu/build/CMakeFiles 0
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build && $(CMAKE_COMMAND) -E cmake_progress_start /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/src/CMakeFiles/progress.marks
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/trt_inference.dir/rule:
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/trt_inference.dir/rule
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/trt_inference.dir/rule
 .PHONY : src/CMakeFiles/trt_inference.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ trt_inference: src/CMakeFiles/trt_inference.dir/rule
 
 # fast build rule for target.
 trt_inference/fast:
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build && $(MAKE) -f src/CMakeFiles/trt_inference.dir/build.make src/CMakeFiles/trt_inference.dir/build
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build && $(MAKE) -f src/CMakeFiles/trt_inference.dir/build.make src/CMakeFiles/trt_inference.dir/build
 .PHONY : trt_inference/fast
 
 inference.o: inference.cpp.o
@@ -131,7 +131,7 @@ inference.o: inference.cpp.o
 
 # target to build an object file
 inference.cpp.o:
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build && $(MAKE) -f src/CMakeFiles/trt_inference.dir/build.make src/CMakeFiles/trt_inference.dir/inference.cpp.o
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build && $(MAKE) -f src/CMakeFiles/trt_inference.dir/build.make src/CMakeFiles/trt_inference.dir/inference.cpp.o
 .PHONY : inference.cpp.o
 
 inference.i: inference.cpp.i
@@ -140,7 +140,7 @@ inference.i: inference.cpp.i
 
 # target to preprocess a source file
 inference.cpp.i:
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build && $(MAKE) -f src/CMakeFiles/trt_inference.dir/build.make src/CMakeFiles/trt_inference.dir/inference.cpp.i
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build && $(MAKE) -f src/CMakeFiles/trt_inference.dir/build.make src/CMakeFiles/trt_inference.dir/inference.cpp.i
 .PHONY : inference.cpp.i
 
 inference.s: inference.cpp.s
@@ -149,7 +149,7 @@ inference.s: inference.cpp.s
 
 # target to generate assembly for a file
 inference.cpp.s:
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build && $(MAKE) -f src/CMakeFiles/trt_inference.dir/build.make src/CMakeFiles/trt_inference.dir/inference.cpp.s
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build && $(MAKE) -f src/CMakeFiles/trt_inference.dir/build.make src/CMakeFiles/trt_inference.dir/inference.cpp.s
 .PHONY : inference.cpp.s
 
 main.o: main.cpp.o
@@ -158,7 +158,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build && $(MAKE) -f src/CMakeFiles/trt_inference.dir/build.make src/CMakeFiles/trt_inference.dir/main.cpp.o
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build && $(MAKE) -f src/CMakeFiles/trt_inference.dir/build.make src/CMakeFiles/trt_inference.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -167,7 +167,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build && $(MAKE) -f src/CMakeFiles/trt_inference.dir/build.make src/CMakeFiles/trt_inference.dir/main.cpp.i
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build && $(MAKE) -f src/CMakeFiles/trt_inference.dir/build.make src/CMakeFiles/trt_inference.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -176,7 +176,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build && $(MAKE) -f src/CMakeFiles/trt_inference.dir/build.make src/CMakeFiles/trt_inference.dir/main.cpp.s
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build && $(MAKE) -f src/CMakeFiles/trt_inference.dir/build.make src/CMakeFiles/trt_inference.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -205,6 +205,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

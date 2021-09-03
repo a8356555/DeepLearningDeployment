@@ -1,4 +1,4 @@
-# Install script for directory: /content/YuShanAICompetition/csrc/deploy_gpu/src
+# Install script for directory: /content/DeepLearningDeployment/tensorrt/cpp_deploy/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

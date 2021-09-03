@@ -18,6 +18,6 @@ void postProcessResults(float* gpu_output, std::vector<float>& cpu_output, const
 
 void loadEngine(std::string const& path, nvinfer1::ICudaEngine*& engine);
 
-std::vector<float> predict(const std::string& engine_path, const std::string& image_path);
+void predict(const std::string& engine_path, const std::string& image_path);
 
-void evaluate_predict_speed(const std::string& engine_path, const std::string& image_path, int test_num);
+void evaluate_predict_speed(const std::string& engine_path, const std::string& image_path, float* p_cpu_output[], unsigned int test_num);

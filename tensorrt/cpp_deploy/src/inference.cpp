@@ -20,7 +20,7 @@
 
 #include <NvInfer.h>
 #include <NvOnnxParser.h>
-#include <inference.h>
+#include "inference.h"
 
 using namespace cv;
 using namespace cv::cuda;
@@ -119,11 +119,11 @@ void preProcessImage(const std::string& image_path, float* gpu_input, const nvin
 }
 
 
-void postProcessResults(float* gpu_output, std::vector<float>& cpu_output, const nvinfer1::Dims& dims, int batch_size)
+void postProcessResults(float* gpu_output, float* p_cpu_output[], const nvinfer1::Dims& dims, int batch_size)
 {
     // auto classes = getClassNames("imagenet_classes.txt");
     int class_num = 801;
-    cudaMemcpy(cpu_output.data(), gpu_output, cpu_output.size() * sizeof(float), cudaMemcpyDeviceToHost);
+    cudaMemcpy(*p_cpu_output, gpu_output, cpu_output.size() * sizeof(float), cudaMemcpyDeviceToHost);
         
     // calculate softmax
     /* std::transform(cpu_output.begin(), cpu_output.end(), cpu_output.begin(), [](float val){return std::exp(val);});
@@ -209,7 +209,7 @@ void buildTRTEngineContextBuffer(
     return;
 }
 
-std::vector<float> predict(const std::string& engine_path, const std::string& image_path) 
+void predict(const std::string& engine_path, const std::string& image_path) 
 {
     int batch_size = 1;
     nvinfer1::ICudaEngine* engine{nullptr};
@@ -232,7 +232,7 @@ std::vector<float> predict(const std::string& engine_path, const std::string& im
     return cpu_output;
 }
 
-void evaluate_predict_speed(const std::string& engine_path, const std::string& image_path, int test_num)
+void evaluate_predict_speed(const std::string& engine_path, const std::string& image_path, float* p_cpu_output[], unsigned int test_num)
 {
     int batch_size = 1;
     nvinfer1::ICudaEngine* engine{nullptr};
@@ -244,11 +244,11 @@ void evaluate_predict_speed(const std::string& engine_path, const std::string& i
     
     auto t_start = std::chrono::high_resolution_clock::now();
     for (int i=0; i<test_num; i++) {
-        std::vector<float> cpu_output((getSizeByDim(output_dims[0])*batch_size));
+        // std::vector<float> cpu_output((getSizeByDim(output_dims[0])*batch_size));
         preProcessImage(image_path, (float*)buffers[0], input_dims[0]);
         context->enqueue(batch_size, buffers.data(), 0, nullptr);
         
-        postProcessResults((float*)buffers[1], cpu_output, output_dims[0], batch_size);
+        postProcessResults((float*)buffers[1], p_cpu_output, output_dims[0], batch_size);
     }
     auto t_end = std::chrono::high_resolution_clock::now();
     auto elapsed_time_ms = std::chrono::duration<double, std::milli>(t_end-t_start).count()/test_num;

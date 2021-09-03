@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/content/YuShanAICompetition/csrc/deploy_gpu/src/inference.cpp" "/content/YuShanAICompetition/csrc/deploy_gpu/build/src/CMakeFiles/trt_inference.dir/inference.cpp.o"
-  "/content/YuShanAICompetition/csrc/deploy_gpu/src/main.cpp" "/content/YuShanAICompetition/csrc/deploy_gpu/build/src/CMakeFiles/trt_inference.dir/main.cpp.o"
+  "/content/DeepLearningDeployment/tensorrt/cpp_deploy/src/inference.cpp" "/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/src/CMakeFiles/trt_inference.dir/inference.cpp.o"
+  "/content/DeepLearningDeployment/tensorrt/cpp_deploy/src/main.cpp" "/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/src/CMakeFiles/trt_inference.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

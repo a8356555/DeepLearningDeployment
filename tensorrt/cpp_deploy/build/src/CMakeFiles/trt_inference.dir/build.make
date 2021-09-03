@@ -43,10 +43,10 @@ RM = /usr/local/lib/python2.7/dist-packages/cmake/data/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /content/YuShanAICompetition/csrc/deploy_gpu
+CMAKE_SOURCE_DIR = /content/DeepLearningDeployment/tensorrt/cpp_deploy
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /content/YuShanAICompetition/csrc/deploy_gpu/build
+CMAKE_BINARY_DIR = /content/DeepLearningDeployment/tensorrt/cpp_deploy/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/trt_inference.dir/depend.make
@@ -59,29 +59,29 @@ include src/CMakeFiles/trt_inference.dir/flags.make
 
 src/CMakeFiles/trt_inference.dir/main.cpp.o: src/CMakeFiles/trt_inference.dir/flags.make
 src/CMakeFiles/trt_inference.dir/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/content/YuShanAICompetition/csrc/deploy_gpu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/trt_inference.dir/main.cpp.o"
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/trt_inference.dir/main.cpp.o -c /content/YuShanAICompetition/csrc/deploy_gpu/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/trt_inference.dir/main.cpp.o"
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/trt_inference.dir/main.cpp.o -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/src/main.cpp
 
 src/CMakeFiles/trt_inference.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/trt_inference.dir/main.cpp.i"
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /content/YuShanAICompetition/csrc/deploy_gpu/src/main.cpp > CMakeFiles/trt_inference.dir/main.cpp.i
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /content/DeepLearningDeployment/tensorrt/cpp_deploy/src/main.cpp > CMakeFiles/trt_inference.dir/main.cpp.i
 
 src/CMakeFiles/trt_inference.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/trt_inference.dir/main.cpp.s"
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /content/YuShanAICompetition/csrc/deploy_gpu/src/main.cpp -o CMakeFiles/trt_inference.dir/main.cpp.s
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /content/DeepLearningDeployment/tensorrt/cpp_deploy/src/main.cpp -o CMakeFiles/trt_inference.dir/main.cpp.s
 
 src/CMakeFiles/trt_inference.dir/inference.cpp.o: src/CMakeFiles/trt_inference.dir/flags.make
 src/CMakeFiles/trt_inference.dir/inference.cpp.o: ../src/inference.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/content/YuShanAICompetition/csrc/deploy_gpu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/trt_inference.dir/inference.cpp.o"
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/trt_inference.dir/inference.cpp.o -c /content/YuShanAICompetition/csrc/deploy_gpu/src/inference.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/trt_inference.dir/inference.cpp.o"
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/trt_inference.dir/inference.cpp.o -c /content/DeepLearningDeployment/tensorrt/cpp_deploy/src/inference.cpp
 
 src/CMakeFiles/trt_inference.dir/inference.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/trt_inference.dir/inference.cpp.i"
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /content/YuShanAICompetition/csrc/deploy_gpu/src/inference.cpp > CMakeFiles/trt_inference.dir/inference.cpp.i
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /content/DeepLearningDeployment/tensorrt/cpp_deploy/src/inference.cpp > CMakeFiles/trt_inference.dir/inference.cpp.i
 
 src/CMakeFiles/trt_inference.dir/inference.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/trt_inference.dir/inference.cpp.s"
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /content/YuShanAICompetition/csrc/deploy_gpu/src/inference.cpp -o CMakeFiles/trt_inference.dir/inference.cpp.s
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /content/DeepLearningDeployment/tensorrt/cpp_deploy/src/inference.cpp -o CMakeFiles/trt_inference.dir/inference.cpp.s
 
 # Object files for target trt_inference
 trt_inference_OBJECTS = \
@@ -166,8 +166,8 @@ trt_inference_EXTERNAL_OBJECTS =
 ../bin/trt_inference: /usr/local/lib/libopencv_core.so.4.5.2
 ../bin/trt_inference: /usr/local/lib/libopencv_cudev.so.4.5.2
 ../bin/trt_inference: src/CMakeFiles/trt_inference.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/content/YuShanAICompetition/csrc/deploy_gpu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../../bin/trt_inference"
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/trt_inference.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/content/DeepLearningDeployment/tensorrt/cpp_deploy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../../bin/trt_inference"
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/trt_inference.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/trt_inference.dir/build: ../bin/trt_inference
@@ -175,10 +175,10 @@ src/CMakeFiles/trt_inference.dir/build: ../bin/trt_inference
 .PHONY : src/CMakeFiles/trt_inference.dir/build
 
 src/CMakeFiles/trt_inference.dir/clean:
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build/src && $(CMAKE_COMMAND) -P CMakeFiles/trt_inference.dir/cmake_clean.cmake
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/src && $(CMAKE_COMMAND) -P CMakeFiles/trt_inference.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/trt_inference.dir/clean
 
 src/CMakeFiles/trt_inference.dir/depend:
-	cd /content/YuShanAICompetition/csrc/deploy_gpu/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /content/YuShanAICompetition/csrc/deploy_gpu /content/YuShanAICompetition/csrc/deploy_gpu/src /content/YuShanAICompetition/csrc/deploy_gpu/build /content/YuShanAICompetition/csrc/deploy_gpu/build/src /content/YuShanAICompetition/csrc/deploy_gpu/build/src/CMakeFiles/trt_inference.dir/DependInfo.cmake --color=$(COLOR)
+	cd /content/DeepLearningDeployment/tensorrt/cpp_deploy/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /content/DeepLearningDeployment/tensorrt/cpp_deploy /content/DeepLearningDeployment/tensorrt/cpp_deploy/src /content/DeepLearningDeployment/tensorrt/cpp_deploy/build /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/src /content/DeepLearningDeployment/tensorrt/cpp_deploy/build/src/CMakeFiles/trt_inference.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/trt_inference.dir/depend
 
