@@ -2,7 +2,7 @@
 # %cd /usr/local/cuda-11.0/extras/demo_suite
 # !./deviceQuery
 
-echo "you should see GPU compute capability (version) first, then change the cmake arg CUDA_ARCH_BIN (only number without .)"
+echo "you should see GPU compute capability (version) first, then change the cmake arg CUDA_ARCH_BIN"
 sudo apt update
 sudo apt install build-essential cmake pkg-config unzip yasm git checkinstall
 sudo apt install libjpeg-dev libpng-dev libtiff-dev
