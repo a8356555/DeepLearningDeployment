@@ -1,3 +1,8 @@
+# see GPU compute capability (version) first
+# %cd /usr/local/cuda-11.0/extras/demo_suite
+# !./deviceQuery
+
+echo "you should see GPU compute capability (version) first"
 sudo apt update
 sudo apt install build-essential cmake pkg-config unzip yasm git checkinstall
 sudo apt install libjpeg-dev libpng-dev libtiff-dev
@@ -25,7 +30,6 @@ echo "Procced with the installation"
 cd opencv-4.5.2
 mkdir build
 cd build
-# see GPU compute capability (version) first
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D CMAKE_INSTALL_PREFIX=/usr/local \
 -D WITH_TBB=ON \
