@@ -13,7 +13,8 @@ def get_and_check_onnx_session(model_path):
     onnx_model = onnx.load(model_path)
     onnx.checker.check_model(onnx_model)
     print('if nothing showed, then the model is fine.')
-    return onnx_model
+    return onnxruntime.InferenceSession(model_path)
+
 
 
 def _calculate_dhdw_half(h, w):
