@@ -5,18 +5,15 @@ import os
 import numpy as np
 import cv2
 import time
+from argparse import ArgumentParser
 
-
-    
 def get_and_check_onnx_session(model_path):
     import onnx
     onnx_model = onnx.load(model_path)
     onnx.checker.check_model(onnx_model)
     print('if nothing showed, then the model is fine.')
     return onnxruntime.InferenceSession(model_path)
-
-
-
+    
 def _calculate_dhdw_half(h, w):
     """Calculate difference of h or w in order to get a square """
     if h > w:
@@ -41,11 +38,10 @@ def show_onnx_session_io_name(session):
     session.get_modelmeta()
     first_input_name = session.get_inputs()[0].name
     first_output_name = session.get_outputs()[0].name
-    print(path, first_input_name, first_output_name)
+    print(first_input_name, first_output_name)
     
-def onnxruntime_inference(image, ort_session):
-    image = preprocess_onnx(image)
-    ort_inputs = {ort_session.get_inputs()[0].name: image}
+def onnxruntime_inference(inp, ort_session):    
+    ort_inputs = {ort_session.get_inputs()[0].name: inp}
     ort_outs = ort_session.run(None, ort_inputs)
     return ort_outs
 

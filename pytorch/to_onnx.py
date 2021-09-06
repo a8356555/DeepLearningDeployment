@@ -1,5 +1,6 @@
 import onnx
 import torch
+from argparse import ArgumentParser
 
 def get_and_check_onnx_model(model_path):
     onnx_model = onnx.load(model_path)
