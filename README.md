@@ -25,11 +25,11 @@ https://colab.research.google.com/drive/1JXzXEpR6_w5W1doFgUoY5lDl1L7tIAXx
   
   
 ## <a name="ta">Target
-    a. Be Familiar with ONNX, TensorRT, TVM
+    a. Be Familiar with ONNX, TensorRT, TVM and other frameworks.
     
-    b. Deploy using C++ API
+    b. Try to speed up using the frameworks above.
             
-    c. Try to speed up using the framework above
+    c. Deploy models using C++.
   
 ## <a name="ex">Experiment
     
