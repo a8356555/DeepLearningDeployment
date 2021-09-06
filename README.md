@@ -1,3 +1,7 @@
+Experimenting on
+
+https://colab.research.google.com/drive/1_9XwlP7vMmk7C5tZ4Bb-PDSoCeevdOo-#scrollTo=sQFr8t5gYZBb
+
 # Table of Contents
 1. [Deep Learning Deployment](#dld)
     1. [Environmental info](#ei)
