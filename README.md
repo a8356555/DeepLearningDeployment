@@ -34,7 +34,7 @@ https://colab.research.google.com/drive/1JXzXEpR6_w5W1doFgUoY5lDl1L7tIAXx
     * There's no difference among outputs of raw pytorch models, static/dynamic onnx models and cpp api models. (e-10)
     * The inference speed of static onnx models is the fastest, at most approximately 2x compared to the one of raw pytorch models.
 
-<img src="./onnxruntime/pytorch_onnx_inference_speed.png" width="500" height="500">
+<img align="center" src="./onnxruntime/pytorch_onnx_inference_speed.png" width="500" height="500">
     
 ## <a name="todo">TODO
 * Openvino (python / cpp api)   
