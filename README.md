@@ -8,6 +8,7 @@ https://colab.research.google.com/drive/1JXzXEpR6_w5W1doFgUoY5lDl1L7tIAXx
     2. [Target](#ta)
     3. [Experiment](#ex)
     4. [TODO](#todo)
+    5. [NOTE](#note)
     
     
 # <a name="dld">1. Deep Learning Deployment
@@ -24,7 +25,7 @@ https://colab.research.google.com/drive/1JXzXEpR6_w5W1doFgUoY5lDl1L7tIAXx
         - torchvision 0.10.0+cu102
         - OpenCV 4.5.2
         - Onnxruntime v1.8.2
-        - TVM
+        - TVM 0.8
         - OpenVINO 2021.1.110
         
 * Gpu experiment environment 
@@ -43,7 +44,7 @@ https://colab.research.google.com/drive/1JXzXEpR6_w5W1doFgUoY5lDl1L7tIAXx
         - TensorRT 8.0.1.6
     
 ## <a name="ta">Target
-* Have an overall understanding of multiple frameworks used for speeding up deployment and get familiar with them quickly. eg. ONNX, TensorRT, TVM, Openvino, etc.
+* Have an overall understanding of multiple frameworks used for speeding up deployment and get familiar with their structure. eg. Onnxruntime, TensorRT, TVM, Openvino, etc.
 * Compare the inference speed of frameworks above.
 * Further speed up: deploy models using C++.
   
@@ -58,6 +59,10 @@ https://colab.research.google.com/drive/1JXzXEpR6_w5W1doFgUoY5lDl1L7tIAXx
 ## <a name="todo">TODO
 * Openvino (python / cpp api)   
 * Tvm cpp api   
-* EfficienNet on TVM   
-* Mask-RCNN on TensorRT   
-* Quantization model
+* EfficienNet on TVM
+* The neck and head of Mask-RCNN on TensorRT
+* Mixed Precision quantization model
+    
+## <a name="note">NOTE
+* cv::cuda::resize has different results compared to cv::resize (the former always use the INTER_NEAREST flat no matter what you pass)
+    https://github.com/opencv/opencv/issues/4728
