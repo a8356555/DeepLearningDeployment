@@ -13,21 +13,39 @@ https://colab.research.google.com/drive/1JXzXEpR6_w5W1doFgUoY5lDl1L7tIAXx
 # <a name="dld">1. Deep Learning Deployment
 
 ## <a name="ei">Environmental info
-    Running on Colab:
-        Ubuntu 18.04.5 LTS
-        Python 3.7.11
-        cuda upgrade to 11.0
-        cudnn 7.6.5
+* Cpu experiment environment
+    
+        - Ubuntu 18.04.5 LTS
+        - Cpu 2 cores Intel(R) Xeon(R) CPU @ 2.30GHz
+        - RAM 8GB DIMM RAM Synchronous
         
-    Python pytorch related version:
-        torch==1.9.0+cu102
-        torchvision==0.10.0+cu102
-  
-  
+        - Python 3.6.9
+        - torch 1.9.0+cu102
+        - torchvision 0.10.0+cu102
+        - OpenCV 4.5.2
+        - Onnxruntime v1.8.2
+        - TVM
+        - OpenVINO 2021.1.110
+        
+* Gpu experiment environment 
+    
+        - Ubuntu 18.04.5 LTS
+        - Cpu 2 cores Intel(R) Xeon(R) CPU @ 2.30GHz
+        - RAM 12GB
+        - GPU Tesla K80    
+    
+        - Python 3.7.11    
+        - CUDA 11.2
+        - Cudnn 7.6.5                
+        - torch 1.9.0+cu102
+        - torchvision 0.10.0+cu102
+        - OpenCV 4.5.2 built with CUDA
+        - TensorRT 8.0.1.6
+    
 ## <a name="ta">Target
-* Be Familiar with ONNX, TensorRT, TVM and other frameworks.   
-* Try to speed up using the frameworks above.           
-* Deploy models using C++.
+* Have an overall understanding of multiple frameworks used for speeding up deployment and get familiar with them quickly. eg. ONNX, TensorRT, TVM, Openvino, etc.
+* Compare the inference speed of frameworks above.
+* Further speed up: deploy models using C++.
   
 ## <a name="ex">Experiment
 1. cpu: onnx vs pytorch
