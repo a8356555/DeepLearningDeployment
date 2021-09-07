@@ -70,11 +70,13 @@ void preProcessImage(const std::string& image_path, float* gpu_input, const nvin
         return;
     }    
     cv::cvtColor(frame, frame, cv::COLOR_BGR2RGB);
+        
     int h = frame.rows;
     int w = frame.cols;
     int t_h = 224;
     int t_w = 224;
     int dh_half, dw_half;
+        
     if (h > w) {
         dh_half = static_cast<int>(0.1*h/2);
         dw_half = static_cast<int>((h+2*dh_half-w)/2);
@@ -82,25 +84,27 @@ void preProcessImage(const std::string& image_path, float* gpu_input, const nvin
         dw_half = static_cast<int>(0.1*w/2);
         dh_half = static_cast<int>((w+2*dw_half-h)/2);
     }
+        
+    cv::copyMakeBorder(frame, frame, dh_half, dh_half, dw_half, dw_half, cv::BORDER_REPLICATE);
+    auto size = cv::Size(248, 248);
+    cv::resize(frame, frame, size);
+
     GpuMat gpu_frame;
     gpu_frame.upload(frame);
-
-    auto input_width = dims.d[2];
-    auto input_height = dims.d[1];
-    auto channels = dims.d[0];
-    auto input_size = cv::Size(input_width, input_height);
     
-    cuda::copyMakeBorder(gpu_frame, gpu_frame, dh_half, dh_half, dw_half, dw_half, cv::BORDER_REPLICATE);
-    auto size = cv::Size(248, 248);
-    cuda::resize(gpu_frame, gpu_frame, size);
-    gpu_frame.convertTo(gpu_frame, CV_32FC3, 1.f/255.f);
+    gpu_frame.convertTo(gpu_frame, CV_32F, 1.f/255.f);
     cv::Rect ROI(12, 12, t_h, t_w);
-
     gpu_frame = gpu_frame(ROI).clone();
     // // normalize
     // gpu_frame = cuda::subtract(gpu_frame, cv::Scalar(0.485f, 0.456f, 0.406f), gpu_frame);
     // gpu_frame = cuda::divide(gpu_frame, cv::Scalar(0.229f, 0.224f, 0.225f), gpu_grame);
     
+    auto input_width = dims.d[3];
+    auto input_height = dims.d[2];
+    auto channels = dims.d[1];
+    // batch_size = dims.d[0];
+    auto input_size = cv::Size(input_width, input_height);
+
     std::vector<GpuMat> chw;
     // copy processed data to gpu_input channel by channel using pointer
     // 1) pass pointer into vector 2) split processed image into vector     
