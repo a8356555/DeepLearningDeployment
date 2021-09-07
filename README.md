@@ -1,6 +1,8 @@
-Experimenting on
+Experimenting GPU environment on:
 
 https://colab.research.google.com/drive/1JXzXEpR6_w5W1doFgUoY5lDl1L7tIAXx
+
+Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in repo)
 
 # Table of Contents
 * [Deep Learning Deployment](#dld)
