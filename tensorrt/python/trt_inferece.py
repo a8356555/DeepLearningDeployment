@@ -2,6 +2,7 @@ import tensorrt as trt
 import pycuda.driver as cuda
 import common
 import cv2
+from argparse import ArgumentParser
 
 TRT_LOGGER = trt.Logger(trt.Logger.WARNING)
 
