@@ -59,6 +59,7 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
 </p>    
     
 ## <a name="todo">TODO
+* TVM on GPU (colab built failed)
 * Openvino (python / cpp api)   
 * Tvm cpp api   
 * EfficienNet on TVM
