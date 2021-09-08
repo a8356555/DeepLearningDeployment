@@ -46,7 +46,7 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
         - TensorRT 8.0.1.6
     
 ## <a name="ta">Target
-* Have an overall understanding of multiple frameworks used for speeding up deployment and get familiar with their structure. eg. Onnxruntime, TensorRT, TVM, Openvino, etc.
+* Have an overall understanding of multiple frameworks used for speeding up deployment and get familiar with their structure. eg. ONNX Runtime, TensorRT, TVM, Openvino, etc.
 * Compare the inference speed of frameworks above.
 * Further speed up: deploy models using C++.
   
