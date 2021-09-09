@@ -16,14 +16,17 @@ def pytorch_to_onnx(model, model_path, input_shape=(1, 3, 224, 224), opset_versi
     get_and_check_onnx_model(model_path)
 
 
-def pytorch_to_onnx_dynamic(model, model_path, input_shape=(1, 3, 224, 224), opset_version=11):        
-    input_data = torch.randn(input_shape)
-    input_name = "input.1"
-    output_name = "output"
-    input_names = [input_name]
-    output_names = [output_name]
-    dynamic_axes = {input_name: {2:'width', 3:'height'}, output_name : {1:'classes'}}
-    torch.onnx.export(model, input_data, model_path, input_names=input_names, output_names=output_names, dynamic_axes=dynamic_axes, opset_version=opset_version)
+def pytorch_to_onnx_dynamic(
+        model, 
+        model_path, 
+        input_shape=(1, 3, 224, 224),
+        input_name="input.1",
+        output_name="output",
+        dynamic_axes={"input.1": {2:'width', 3:'height'}, "output": {1:'classes'}}, 
+        opset_version=11
+    ):        
+    input_data = torch.randn(input_shape)            
+    torch.onnx.export(model, input_data, model_path, input_names=[input_name], output_names=[output_name], dynamic_axes=dynamic_axes, opset_version=opset_version)
     print('Export Finished, now Checking ONNX Model')    
     get_and_check_onnx_model(model_path)
 
