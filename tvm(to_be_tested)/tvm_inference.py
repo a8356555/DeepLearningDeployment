@@ -60,7 +60,7 @@ def postprocess_tvm(outputs):
 def tvm_inference(module, img):
     module.set_input(cfg.input_name, tvm.nd.array(img.astype(cfg.dtype)))
     module.run()
-    tvm_output = m.get_output(0)
+    tvm_output = module.get_output(0)
     return tvm_output
 
 def tvm_vm_inference(img):
