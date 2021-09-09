@@ -57,7 +57,7 @@ def preprocess_tvm(image):
 def postprocess_tvm(outputs):
     return outputs.asnumpy()[0]
 
-def tvm_inference(img):
+def tvm_inference(module, img):
     module.set_input(cfg.input_name, tvm.nd.array(img.astype(cfg.dtype)))
     module.run()
     tvm_output = m.get_output(0)
