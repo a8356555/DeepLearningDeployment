@@ -40,12 +40,12 @@ def show_onnx_session_io_name(session):
     first_output_name = session.get_outputs()[0].name
     print(first_input_name, first_output_name)
     
-def onnxruntime_inference(image, ort_session):    
+def onnxruntime_inference(ort_session, image):    
     ort_inputs = {ort_session.get_inputs()[0].name: image}
     ort_outs = ort_session.run(None, ort_inputs)
     return ort_outs
 
-def onnxruntime_inference_gpu(image, ort_session):
+def onnxruntime_inference_gpu(ort_session, image):
     ortvalue = onnxruntime.OrtValue.ortvalue_from_numpy(image, 'cuda', 0)   
     ort_inputs = {ort_session.get_inputs()[0].name: ortvalue}
     return ort_session.run(None, ort_inputs)
@@ -71,6 +71,6 @@ if __name__ == "__main__":
     session = get_and_check_onnx_session(args.onnx_path)
     image = cv2.imread(args.image_path)
     image = preprocess_onnx(image)
-    outputs = onnxruntime_inference(image, session)
+    outputs = onnxruntime_inference(session, image)
     resluts = postprocess_onnx(outputs)
     print(resluts)
