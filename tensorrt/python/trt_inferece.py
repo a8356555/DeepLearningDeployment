@@ -113,10 +113,10 @@ def make_parser():
     parser = ArgumentParser(
         description=f"usage ./{__file__} -i path/to/ur/image -o path/to/ur/onnx/file")    
     parser.add_argument(
-        '--image-path', '-i', type=str, default='',
-        help='/path/to/ur/image/or/image')
+        '--image-path', '-i', type=str, required=True,
+        help='/path/to/ur/image/')
     parser.add_argument(
-        '--onnx-path', '-o', type=str, default='',
+        '--onnx-path', '-o', type=str, required=True,
         help='/path/to/ur/onnx/model/file')
     return parser
     
