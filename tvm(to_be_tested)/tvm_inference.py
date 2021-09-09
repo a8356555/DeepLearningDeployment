@@ -49,7 +49,7 @@ def preprocess_tvm(image):
     h, w, c = image.shape
     np_img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     dh_half, dw_half = _calculate_dhdw_half(h, w)
-    image = cv2.copyMakeBorder(image, dh_half, dh_half, dw_half, dw_half, cv2.BORDER_REPLICATE)
+    np_img = cv2.copyMakeBorder(np_img, dh_half, dh_half, dw_half, dw_half, cv2.BORDER_REPLICATE)
     np_img = cv2.resize(np_img, (248, 248))[12:236, 12:236]/255.0
     np_img = np_img.transpose(2, 0, 1)
     return np_img
