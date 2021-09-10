@@ -30,7 +30,7 @@ def get_tvm_module_N_params(
     input_name="input.1", 
     batch_size=1,
     input_shape=(3, 224, 224),
-    layout="NHWC", 
+    layout="NCHW", 
     dtype="float32", 
     use_sparse=False
 ):    
