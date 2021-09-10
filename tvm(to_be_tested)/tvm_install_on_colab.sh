@@ -21,7 +21,7 @@
 !make -j4
 %cd /content
 #TODO 調整文字 import 問題還不確定
-!echo 'export TVM_HOME=/root/tvm' >> .bashrc
+!echo 'export TVM_HOME=/content/tvm' >> .bashrc
 !echo 'export PYTHONPATH=$TVM_HOME/python:${PYTHONPATH}' >> .bashrc
 !pip3 install \
 		decorator \
