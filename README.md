@@ -70,8 +70,8 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
 ## <a name="todo">TODO
 * CPU/GPU/MaskRCNN TVM with bigger tuning option parameter num_measure_trials = 800*len(tasks)
 * Tvm cpp api
-* EfficienNet on TVM
 * Mask-RCNN on TensorRT / OpenVINO
+* Check why Mask-RCNN result differs.
 * Best configuration on different framework / best tuning on TVM
 * Mixed Precision model
     
