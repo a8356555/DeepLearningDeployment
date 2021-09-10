@@ -54,7 +54,7 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
 ## <a name="ex">Experiment
 1. CPU: Pytorch vs ONNX Runtime vs TVM vs OpenVINO
     * There's no difference among frameworks. (e-10)
-    * TVM is slower than Pytorch, probably not the best tuning or configuration.
+    * TVM is slower than Pytorch, probably because the parameter num_measure_trials is too small.
     * ONNX Runtime is approximately 1.3x ~ 2x faster than Pytorch.
     * ONNX Runtime on C++ is slower than on python, probably not the best implementation or too much overhead.
     * ONNX Runtime using ctypes to call .so lib is much more slower, probably because of too much calling overhead.
@@ -68,6 +68,7 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
     *     
     
 ## <a name="todo">TODO
+* Auto scheduling TVM with tuning option parameter num_measure_trials = 800*len(tasks)
 * Tvm cpp api
 * EfficienNet on TVM
 * Mask-RCNN on TensorRT / OpenVINO
