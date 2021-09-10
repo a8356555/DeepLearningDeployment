@@ -59,20 +59,20 @@ def preprocess_tvm(image):
     dh_half, dw_half = _calculate_dhdw_half(h, w)
     np_img = cv2.copyMakeBorder(np_img, dh_half, dh_half, dw_half, dw_half, cv2.BORDER_REPLICATE)
     np_img = cv2.resize(np_img, (248, 248))[12:236, 12:236]/255.0
-    return np_img.transpose(2, 0, 1)[np.newaxis, :]
+    return np_img.transpose(2, 0, 1).astype(cfg.dtype)[np.newaxis, :]
 
 
 def postprocess_tvm(outputs):
     return outputs.asnumpy()[0]
 
 def tvm_inference(module, img):
-    module.set_input(cfg.input_name, tvm.nd.array(img.astype(cfg.dtype)))
+    module.set_input(cfg.input_name, tvm.nd.array(img))
     module.run()
     tvm_output = module.get_output(0)
     return tvm_output
 
 def tvm_vm_inference(img, intrp):
-    tvm_output = intrp.evaluate()(tvm.nd.array(img.astype(cfg.dtype)), **params)
+    tvm_output = intrp.evaluate()(tvm.nd.array(img), **params)
     return tvm_output
 
 def make_parser():
