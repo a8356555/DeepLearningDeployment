@@ -19,13 +19,13 @@ sudo apt-cache search intel-openvino-dev-ubuntu18
 # 安裝OpenVINO到虛擬機系統中
 sudo apt install -y intel-openvino-dev-ubuntu18-2021.1.110 
 # 列出安裝路徑下內容進行確認
-!ls /opt/intel
-%cd /opt/intel/openvino_2021/install_dependencies
-!sudo -E ./install_openvino_dependencies.sh
-!source /opt/intel/openvino_2021/bin/setupvars.sh
-%cd /opt/intel/openvino_2021/deployment_tools/model_optimizer/install_prerequisites
-!sudo ./install_prerequisites.sh
-!pip install openvino
+ls /opt/intel
+cd /opt/intel/openvino_2021/install_dependencies
+sudo -E ./install_openvino_dependencies.sh
+source /opt/intel/openvino_2021/bin/setupvars.sh
+cd /opt/intel/openvino_2021/deployment_tools/model_optimizer/install_prerequisites
+sudo ./install_prerequisites.sh
+pip install openvino
 # export LD_LIBRARY_PATH=/opt/intel/openvino_2021/inference_engine/lib/intel64/:$LD_LIBRARY_PATH
 
 
