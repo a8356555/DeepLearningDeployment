@@ -48,24 +48,35 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
 ## <a name="ta">Target
 * Have an overall understanding of multiple frameworks used for speeding up deployment and get familiar with their structure. eg. ONNX Runtime, TensorRT, TVM, Openvino, etc.
 * Compare the inference speed of frameworks above.
-* Further speed up: deploy models using C++.
-  
+* Try to deploy models using C++ API.
+* Modify preprocessing step to make sure different frameworks may have the same prediction.
+    
 ## <a name="ex">Experiment
-1. cpu: onnx vs pytorch
-    * There's no difference among outputs of raw pytorch models, static/dynamic onnx models and cpp api models. (e-10)
-    * The inference speed of static onnx models is the fastest, at most approximately 2x compared to the one of raw pytorch models.
+1. CPU: Pytorch vs ONNX Runtime vs TVM vs OpenVINO
+    * There's no difference among frameworks. (e-10)
+    * TVM is slower than Pytorch, probably not the best tuning or configuration.
+    * ONNX Runtime is approximately 1.3x ~ 2x faster than Pytorch.
+    * ONNX Runtime on C++ is slower than on python, probably not the best implementation or too much overhead.
+    * ONNX Runtime using ctypes to call .so lib is much more slower, probably because of too much calling overhead.
+    * OpenVINO is 2x ~ 3x faster than Pyotrch, the best approach so far.
+
 <p align="center">
     <img src="./onnxruntime/pytorch_onnx_inference_speed.png" width="500" height="500">
-</p>    
+</p><br>    
+    
+2. GPU: Pytorch vs ONNX Runtime vs TensorRT vs TVM
+    *     
     
 ## <a name="todo">TODO
-* TVM on GPU (colab built failed)
-* Openvino (python / cpp api)   
-* Tvm cpp api   
+* Tvm cpp api
 * EfficienNet on TVM
-* The neck and head of Mask-RCNN on TensorRT
-* Mixed Precision quantization model
+* Mask-RCNN on TensorRT / OpenVINO
+* Best configuration on different framework / best tuning on TVM
+* Mixed Precision model
     
 ## <a name="note">NOTE
 * cv::cuda::resize has different results compared to cv::resize (the former always use the INTER_NEAREST flat no matter what you pass)
     https://github.com/opencv/opencv/issues/4728
+* Different models may need different package version to support, eg. <br>
+    Mask-RCNN: pytorch to tvm: torch 1.7.0 + torchvision 0.8.1<br>
+    Efficientnet: pytorch to onnx: torch 1.9.0, opset_level=10 (11 failed)
