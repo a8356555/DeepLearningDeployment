@@ -53,13 +53,16 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
 * Modify preprocessing step to make sure different frameworks may have the same prediction.
     
 ## <a name="ex">Experiment
-1. CPU: Pytorch vs ONNX Runtime vs TVM vs OpenVINO
-    * Outputs from different frameworks are mostly the same. (mse=e-10)
-    * TVM is slower than Pytorch, probably because the parameter num_measure_trials is too small.
-    * ONNX Runtime is approximately 1.3x ~ 2x faster than Pytorch.
-    * ONNX Runtime on C++ is slower than on python, probably not the best implementation or too much overhead.
-    * ONNX Runtime using ctypes to call c++ implemented function is much more slower, probably because of too much calling overhead.
-    * OpenVINO is 2x ~ 3x faster than Pyotrch, the best approach so far.
+#### CPU: Pytorch vs ONNX Runtime vs TVM vs OpenVINO
+* Outputs from different frameworks are mostly the same. (mse=e-10)
+* OpenVINO is 1.7x ~ 2.2x faster than Pyotrch. It's the best approach so far.
+* ONNX Runtime is approximately 1.3x ~ 2x faster than Pytorch.
+* Untuned TVM is slower than Pytorch, but the potential of Tuned TVM is big. (taking much time too)
+* ONNX Runtime C++ API is not only slower than python API but also Pytorch, probably not the best implementation or too much overhead.
+* ONNX Runtime using ctypes to call c++ implemented function is much more slower, probably due to too much calling overhead.
+<br>
+* 
+* Easy to use: ONNX Runtime > OpenVINO >>> TVM
 
 <p align="center">
     <img src="./onnxruntime/pytorch_onnx_inference_speed.png" width="500" height="500">
@@ -72,10 +75,11 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
     
     
 ## <a name="todo">TODO
-* CPU/GPU/MaskRCNN TVM with bigger tuning option parameter num_measure_trials = 800*len(tasks)
+* CPU TVM with bigger tuning option parameter num_measure_trials = 800*len(tasks) (now just testing with 1/50 * ideal num_measure_trials)
+* GPU TVM with auto scheduling tuned
 * Tvm CPP API
 * Mask-RCNN on TensorRT / OpenVINO
-* Check why Mask-RCNN result differs.
+* Check why Mask-RCNN result differs
 * Best configuration on different framework
 * Mixed Precision model
     
@@ -85,3 +89,9 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
 * Different models may need different package version to support, eg. <br>
     Mask-RCNN: pytorch to tvm: torch 1.7.0 + torchvision 0.8.1<br>
     Efficientnet: pytorch to onnx: torch 1.9.0, opset_level=10 (11 failed)
+    
+## <a name="su">Summary
+* Choices of frameworks:
+    1. Depend on device. (gpu/cpu, support fp16?, intel device using openvino and nvidia gpu using tensorRT)
+    2. Depend on Time Budget. (TVM has great potential but takes a lot of time.).
+    3. Time consuming of development: TVM >>> TensorRT > OpenVINO > ONNX Runtime .
