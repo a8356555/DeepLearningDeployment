@@ -9,12 +9,20 @@ from tvm.contrib import graph_executor
 
 from argparse import ArgumentParser
 
-def build_inference_vm():
+def build_inference_vm(mod, params, target, dev):
     #TODO
     # # onnx / keras
     with tvm.transform.PassContext(opt_level=3, disabled_pass=["FoldScaleAxis"]):
-        intrp = relay.build_module.create_executor("vm", mod, tvm.cpu(0), cfg.target)    
+        intrp = relay.build_module.create_executor("vm", mod, dev, target)    
     return intrp
+
+def build_inference_vm2_for_maskrcnn(mod, params, target, dev):
+    with tvm.transform.PassContext(opt_level=3, disabled_pass=["FoldScaleAxis"]):
+        vm_exec = relay.vm.compile(mod, target=target, params=params)
+    from tvm.runtime.vm import VirtualMachine
+    vm = VirtualMachine(vm_exec, dev)
+
+
 
 
 def build_inference_module_from_auto_tuning(mod, params, graph_opt_sch_file, target, dev):
@@ -63,7 +71,7 @@ def tvm_inference(module, img):
     tvm_output = module.get_output(0)
     return tvm_output
 
-def tvm_vm_inference(img):
+def tvm_vm_inference(img, intrp):
     tvm_output = intrp.evaluate()(tvm.nd.array(img.astype(cfg.dtype)), **params)
     return tvm_output
 
@@ -76,6 +84,9 @@ def make_parser():
     parser.add_argument(
         '--using-file', '-u', type=str, choices=["log", "json"]
         help='using .log for auto-tuned module, using .json for auto-scheduled one')
+    parser..add_argument(
+        '--using-vm', '-v', type=str, store_action=False,
+        help='using virtual machine (for complicated models)')
     return parser           
 
 if __name__ == "__main__":
