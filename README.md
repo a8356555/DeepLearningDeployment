@@ -68,7 +68,7 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
     *     
     
 ## <a name="todo">TODO
-* Auto scheduling TVM with tuning option parameter num_measure_trials = 800*len(tasks)
+* CPU/GPU/MaskRCNN TVM with bigger tuning option parameter num_measure_trials = 800*len(tasks)
 * Tvm cpp api
 * EfficienNet on TVM
 * Mask-RCNN on TensorRT / OpenVINO
