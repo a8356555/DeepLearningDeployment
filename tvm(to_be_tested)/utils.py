@@ -6,7 +6,6 @@ import tvm
 from tvm import relay
 import tvm.contrib.graph_executor as runtime
 
-
 def get_network_from_onnx(
     model_path, 
     input_name="input.1", 
