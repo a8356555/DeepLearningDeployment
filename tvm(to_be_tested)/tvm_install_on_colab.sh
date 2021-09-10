@@ -32,3 +32,6 @@
 		cloudpickle
 !rm -rf /var/lib/apt/lists/*
 
+
+
+# sys.path.insert(0, "/content/tvm/python")
