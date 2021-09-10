@@ -7,7 +7,7 @@ from tvm.relay import data_dep_optimization as ddo
 
 from argparse import ArgumentParser
 
-def run_tuning(tasks, task_weights, json_file, trials=1000, use_sparse=False):
+def run_tuning_cpu(tasks, task_weights, json_file, trials=1000, use_sparse=False):
     print("Begin tuning...")
     tuner = auto_scheduler.TaskScheduler(tasks, task_weights)
     tune_option = auto_scheduler.TuningOptions(
@@ -32,13 +32,26 @@ def run_tuning(tasks, task_weights, json_file, trials=1000, use_sparse=False):
     else:
         tuner.tune(tune_option)
 
+def run_tuning(tasks, task_weights, json_file, trials=1000):
+    print("Begin tuning...")
+    measure_ctx = auto_scheduler.LocalRPCMeasureContext(repeat=1, min_repeat_ms=300, timeout=10)
+
+    tuner = auto_scheduler.TaskScheduler(tasks, task_weights)
+    tune_option = auto_scheduler.TuningOptions(
+        num_measure_trials=200,  # change this to 20000 to achieve the best performance
+        runner=measure_ctx.runner,
+        measure_callbacks=[auto_scheduler.RecordToFile(log_file)],
+    )
+
+    tuner.tune(tune_option)
 
 # We do not run the tuning in our webpage server since it takes too long.
 # Uncomment the following line to run it by yourself.
 
 def make_parser():
     parser = ArgumentParser(
-        description=f"usage ./{__file__} ")    
+        description=f"usage ./{__file__} " -d cpu or gpu)    
+    parser.add_argument("-d", "--device", choices=["cpu", "gpu"], requires=True)
     return parser
     
 if __name__ == "__main__":
@@ -62,5 +75,9 @@ if __name__ == "__main__":
     for idx, task in enumerate(tasks):
         print("========== Task %d  (workload key: %s) ==========" % (idx, task.workload_key))
         print(task.compute_dag)
-
-    run_tuning(tasks, task_weights, cfg.json_file, trials=200)
+    recommended_trials = 800*len(tasks)
+    
+    if args.device == "cpu":
+        run_tuning_cpu(tasks, task_weights, cfg.json_file, trials=recommended_trials)
+    else:
+        run_tuning_gpu(tasks, task_weights, cfg.json_file, trials=recommended_trials)
