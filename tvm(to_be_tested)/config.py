@@ -12,7 +12,11 @@ class cfg:
     dtype = "float32"
     layout = "NCHW"
     opset_version = 11
-
+    
+# # Define the neural network and compilation target.
+# # If the target machine supports avx512 instructions, replace the
+# # "llvm -mcpu=core-avx2" with "llvm -mcpu=skylake-avx512"
+#     target = tvm.target.Target("llvm -mcpu=core-avx2")
     target = "llvm"
     json_file = "TVM_FILES/%s-%s-B%d-%s.json" % (model_name, layout, batch_size, target.kind.name)
     log_file = f'TVM_FILES/{model_name}.log'
