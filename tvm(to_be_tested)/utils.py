@@ -39,11 +39,13 @@ def get_tvm_module_N_params(
     data_shape = (batch_size,) + input_shape
 
     mod, params = get_network_from_onnx(model_path, input_name, data_shape, dtype)
-    net = mod["main"]
-    net = relay.Function(
-        net.params, relay.nn.softmax(net.body), None, net.type_params, net.attrs
-    )
-    mod = tvm.IRModule.from_expr(net)
+    if layout == "NHWC":
+        mod = convert_layout(mod)
+    # net = mod["main"]
+    # net = relay.Function(
+    #     net.params, relay.nn.softmax(net.body), None, net.type_params, net.attrs
+    # )
+    # mod = tvm.IRModule.from_expr(net)
     if use_sparse:
         from tvm.topi.sparse.utils import convert_model_dense_to_sparse
         mod, params = convert_model_dense_to_sparse(mod, params, bs_r=4, random_params=True)
