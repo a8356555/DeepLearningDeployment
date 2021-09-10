@@ -9,7 +9,7 @@ def setup_network(xml_path, bin_path, batch_size=1):
     ie = IECore() #建立推論引擎
     net = IENetwork(model=xml_path, weights=bin_path) #載入模型及權重
     input_blob = next(iter(net.inputs)) #準備輸入空間
-    out_blob = next(iter(net.outputs)) #準備輸出空間
+    output_blob = next(iter(net.outputs)) #準備輸出空間
     net.batch_size = batch_size #指定批次讀取數量
     n, c, h, w = net.inputs[input_blob].shape #取得批次數量、通道數及影像高、寬
     exec_net = ie.load_network(network=net, device_name="CPU") #載入模型到指定裝置(CPU, GPU, MYRIAD)並產生工作網路
