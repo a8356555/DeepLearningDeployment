@@ -19,8 +19,8 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
 * Cpu experiment environment
     
         - Ubuntu 18.04.5 LTS
-        - Cpu 2 cores Intel(R) Xeon(R) CPU @ 2.30GHz
-        - RAM 8GB DIMM RAM Synchronous
+        - Cpu 4 cores Intel(R) Xeon(R) CPU @ 2.30GHz
+        - RAM 16 GB DIMM RAM Synchronous
         
         - Python 3.6.9
         - torch 1.9.0+cu102
@@ -49,15 +49,16 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
 * Have an overall understanding of multiple frameworks used for speeding up deployment and get familiar with their structure. eg. ONNX Runtime, TensorRT, TVM, Openvino, etc.
 * Compare the inference speed of frameworks above.
 * Try to deploy models using C++ API.
+* Try to use ctypes to call c++ implemented inference function.
 * Modify preprocessing step to make sure different frameworks may have the same prediction.
     
 ## <a name="ex">Experiment
 1. CPU: Pytorch vs ONNX Runtime vs TVM vs OpenVINO
-    * There's no difference among frameworks. (e-10)
+    * Outputs from different frameworks are mostly the same. (mse=e-10)
     * TVM is slower than Pytorch, probably because the parameter num_measure_trials is too small.
     * ONNX Runtime is approximately 1.3x ~ 2x faster than Pytorch.
     * ONNX Runtime on C++ is slower than on python, probably not the best implementation or too much overhead.
-    * ONNX Runtime using ctypes to call .so lib is much more slower, probably because of too much calling overhead.
+    * ONNX Runtime using ctypes to call c++ implemented function is much more slower, probably because of too much calling overhead.
     * OpenVINO is 2x ~ 3x faster than Pyotrch, the best approach so far.
 
 <p align="center">
@@ -65,14 +66,17 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
 </p><br>    
     
 2. GPU: Pytorch vs ONNX Runtime vs TensorRT vs TVM
-    *     
+    * Outputs of Pytorch, ONNX Runtime and TVM are mostly the same. (mse=e-10)
+        * Output of TensorRT vs Pytorch are slightly different. (mse=e-4)
+    * TensorRT on C++ is slower
+    
     
 ## <a name="todo">TODO
 * CPU/GPU/MaskRCNN TVM with bigger tuning option parameter num_measure_trials = 800*len(tasks)
-* Tvm cpp api
+* Tvm CPP API
 * Mask-RCNN on TensorRT / OpenVINO
 * Check why Mask-RCNN result differs.
-* Best configuration on different framework / best tuning on TVM
+* Best configuration on different framework
 * Mixed Precision model
     
 ## <a name="note">NOTE
