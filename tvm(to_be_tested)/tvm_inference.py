@@ -71,7 +71,7 @@ def vm_output_to_list(o, dtype="float32"):
     elif isinstance(o, tvm.runtime.container.ADT):
         result = []
         for f in o:
-            result.extend(vmobj_to_list(f, dtype))
+            result.extend(vm_output_to_list(f, dtype))
         return result
     else:
         raise RuntimeError("Unknown object type: %s" % type(o))
