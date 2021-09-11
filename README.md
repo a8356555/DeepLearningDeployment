@@ -1,4 +1,4 @@
-Experimenting GPU environment on:
+Experimenting GPU/Mask-RCNN environment on:
 
 https://colab.research.google.com/drive/1JXzXEpR6_w5W1doFgUoY5lDl1L7tIAXx
 
@@ -76,24 +76,24 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
 #### 3. Mask-RCNN on CPU/GPU:
 * To save resources, I made cpu test on colab using just cpu runtime, and it's  slightly slower than the cpu than gpu runtime. (2.20GHz vs 2.30GHz)
 * Because Mask-RCNN conversion failed on TensorRT / OpenVINO, so just comparing the whole model on ONNX Runtime / Pytorch / TVM.
-    * CPU FPS: ONNX Runtime(0.15) > Pytorch (0.13) >>> untuned TVM (0.013)
-    * GPU FPS:         
+    * FPS on GPU:         
+    * FPS on CPU: ONNX Runtime(0.15) > Pytorch (0.13) >>> untuned TVM (0.013)
     * Pytorch using old version(1.7.0) is slower than new version(1.9.0+cu102), FPS: 0.125 < 0.136
 
 * Use Backbone of Mask-RCNN to evaluate all frameworks.
-    * GPU FPS: 
-    * CPU FPS: ONNX Runtime(1.15) > OpenVINO(1.12) > Pytorch (0.86) >>> untuned TVM (0.19)
+    * FPS on GPU: 
+    * FPS on CPU: ONNX Runtime(1.15) > OpenVINO(1.12) > Pytorch (0.86) >>> untuned TVM (0.19)
     * Tvm using onnx and TensorRT get different output from others???
     
     
 ## <a name="todo">TODO
-* CPU TVM with bigger tuning option parameter num_measure_trials = 800*len(tasks) (now just testing with 1/10 * ideal trials)
-* GPU TVM with auto scheduling tuned
-* Tvm CPP API
-* Mask-RCNN on TensorRT / OpenVINO
-* Check why Mask-RCNN result differs
-* Best configuration on different framework
-* Mixed Precision model
+* Test CPU TVM with bigger tuning option parameter num_measure_trials. (= 800*len(tasks)) (now just testing with 1/10 * ideal trials)
+* Test GPU TVM with auto scheduling tuned.
+* Try Tvm CPP API.
+* Try to successfuly convert Mask-RCNN using TensorRT / OpenVINO.
+* Check why c++ API is not faster.
+* Test best configuration on different framework
+* Try mixed Precision model.
 * Check outputs of Mask-RCNN backbone converted using onnx + tvm and tensorRT.
     
 ## <a name="note">NOTE
