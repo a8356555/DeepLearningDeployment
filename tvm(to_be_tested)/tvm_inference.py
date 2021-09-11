@@ -65,6 +65,17 @@ def preprocess_tvm(image):
 def postprocess_tvm(outputs):
     return outputs.asnumpy()[0]
 
+def vm_output_to_list(o, dtype="float32"):
+    if isinstance(o, tvm.nd.NDArray):
+        return [o]
+    elif isinstance(o, tvm.runtime.container.ADT):
+        result = []
+        for f in o:
+            result.extend(vmobj_to_list(f, dtype))
+        return result
+    else:
+        raise RuntimeError("Unknown object type: %s" % type(o))
+
 def tvm_inference(module, img):
     module.set_input(cfg.input_name, tvm.nd.array(img))
     module.run()
