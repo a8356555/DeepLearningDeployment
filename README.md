@@ -104,7 +104,7 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
     Mask-RCNN: pytorch to tvm: torch 1.7.0 + torchvision 0.8.1<br>
     Efficientnet: pytorch to onnx: torch 1.9.0, opset_level=10 (11 failed)<br>
     Pytorch using old version(1.7.0) is slower than new version(1.9.0+cu102), FPS: 0.125 < 0.136<br>
-* Sometimes Pytorch export to Onnx may fail (uncast host type T)=> restart runtime resolve the problem.
+* Sometimes export Pytorch models to Onnx may fail (Unable to cast from non-held to held instance (T& to Holder<T>)) => restart runtime resolve the problem.
     
 ## <a name="su">Summary
 * Choices of frameworks:
