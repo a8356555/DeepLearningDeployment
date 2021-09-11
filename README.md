@@ -74,6 +74,14 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
     * TensorRT on C++ is slower
     * tuned TVM not yet (costing too much time)
     
+3. Mask-RCNN on CPU/GPU:
+    * Because Mask-RCNN conversion failed on TensorRT / OpenVINO, so just comparing the whole model on ONNX Runtime / Pytorch / TVM.
+        * CPU FPS: ONNX Runtime(0.15) > Pytorch (0.13) >>> untuned TVM (0.013)
+    * 
+        * GPU FPS: 
+        * CPU FPS: ONNX Runtime(1.15) > OpenVINO(1.12) > Pytorch (0.86) >>> untuned TVM (0.19)
+        * Tvm using onnx gets different output???
+    
     
 ## <a name="todo">TODO
 * CPU TVM with bigger tuning option parameter num_measure_trials = 800*len(tasks) (now just testing with 1/10 * ideal trials)
