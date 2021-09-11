@@ -83,7 +83,7 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
 * Use Backbone of Mask-RCNN to evaluate all frameworks.
     * GPU FPS: 
     * CPU FPS: ONNX Runtime(1.15) > OpenVINO(1.12) > Pytorch (0.86) >>> untuned TVM (0.19)
-    * Tvm using onnx gets different output???
+    * Tvm using onnx and TensorRT get different output from others???
     
     
 ## <a name="todo">TODO
@@ -94,7 +94,7 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
 * Check why Mask-RCNN result differs
 * Best configuration on different framework
 * Mixed Precision model
-* Check outputs of Mask-RCNN backbone converted using onnx and tvm.
+* Check outputs of Mask-RCNN backbone converted using onnx + tvm and tensorRT.
     
 ## <a name="note">NOTE
 * cv::cuda::resize has different results compared to cv::resize (the former always use the INTER_NEAREST flat no matter what you pass)
