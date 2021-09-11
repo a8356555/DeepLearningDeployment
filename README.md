@@ -72,10 +72,11 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
     * Outputs of Pytorch, ONNX Runtime and TVM are mostly the same. (mse=e-10)
         * Output of TensorRT vs Pytorch are slightly different. (mse=e-4)
     * TensorRT on C++ is slower
+    * tuned TVM not yet (costing too much time)
     
     
 ## <a name="todo">TODO
-* CPU TVM with bigger tuning option parameter num_measure_trials = 800*len(tasks) (now just testing with 1/50 * ideal num_measure_trials)
+* CPU TVM with bigger tuning option parameter num_measure_trials = 800*len(tasks) (now just testing with 1/10 * ideal trials)
 * GPU TVM with auto scheduling tuned
 * Tvm CPP API
 * Mask-RCNN on TensorRT / OpenVINO
