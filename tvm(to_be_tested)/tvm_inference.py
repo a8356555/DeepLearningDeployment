@@ -9,6 +9,8 @@ from tvm.contrib import graph_executor
 
 from argparse import ArgumentParser
 
+OUTPUT_NUM = 1
+
 def build_inference_vm(mod, params, target, dev):
     #TODO
     # # onnx / keras
@@ -67,11 +69,11 @@ def postprocess_tvm(outputs):
 
 def vm_output_to_list(o, dtype="float32"):
     if isinstance(o, tvm.nd.NDArray):
-        return [o]
+        return o.asnumpy()
     elif isinstance(o, tvm.runtime.container.ADT):
         result = []
         for f in o:
-            result.extend(vm_output_to_list(f, dtype))
+            result.append(vm_output_to_list(f, dtype))
         return result
     else:
         raise RuntimeError("Unknown object type: %s" % type(o))
@@ -79,12 +81,14 @@ def vm_output_to_list(o, dtype="float32"):
 def tvm_inference(module, img):
     module.set_input(cfg.input_name, tvm.nd.array(img))
     module.run()
-    tvm_output = module.get_output(0)
-    return tvm_output
+    tvm_outputs = []
+    for i in range(OUTPUT_NUM):
+        tvm_outputs = module.get_output(i)
+    return tvm_outputs
 
 def tvm_vm_inference(img, intrp):
-    tvm_output = intrp.evaluate()(tvm.nd.array(img), **params)
-    return tvm_output
+    tvm_outputs = intrp.evaluate()(tvm.nd.array(img), **params)
+    return tvm_outputs
 
 def make_parser():
     parser = ArgumentParser(
@@ -101,6 +105,7 @@ def make_parser():
     return parser           
 
 if __name__ == "__main__":
+    
     parser = make_parser()
     args = parser.parse_args()
     mod, params = get_tvm_module_N_params(    
