@@ -58,7 +58,8 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
 * Outputs from different frameworks are mostly the same. (mse=e-10)
 * OpenVINO is 1.7x ~ 2.2x faster than Pyotrch. It's the best approach so far.
 * ONNX Runtime is approximately 1.3x ~ 2x faster than Pytorch.
-* Untuned TVM is slower than Pytorch, but the potential of Tuned TVM is big. (taking much time too)
+* Untuned TVM is slower than Pytorch.
+    * Auto-scheduling-tuned TVM is slower than untuned one, still need to find better hyperparameter eg. target/num_trials/layout.
 * ONNX Runtime C++ API is not only slower than python API but also Pytorch, probably not the best implementation or too much overhead.
 * ONNX Runtime using ctypes to call c++ implemented function is much more slower, probably due to too much calling overhead.<br>
 * Easy to use: ONNX Runtime > OpenVINO >>> TVM
