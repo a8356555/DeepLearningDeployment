@@ -35,4 +35,4 @@ apt-get update \
 		tornado \
 		psutil \
 		xgboost \
-	
+!rm -rf /var/lib/apt/lists/*
