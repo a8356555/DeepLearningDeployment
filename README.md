@@ -69,7 +69,7 @@ https://colab.research.google.com/drive/1Y9-2_lAH9YzHl8H6vNbTV7rk8iKXb4oQ
 * Easy to use: ONNX Runtime > OpenVINO >>> TVM
 
 <p align="center">
-    <img src="./cpp_speed.png" width="600" height="500">
+    <img src="./cpu_speed.png" width="600" height="500">
 </p><br>    
     
 #### 2. GPU (using ResNet50/101, EfficientNet-b4/5/6/7): Pytorch vs ONNX Runtime vs TensorRT vs TVM
