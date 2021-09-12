@@ -4,6 +4,8 @@ https://colab.research.google.com/drive/1JXzXEpR6_w5W1doFgUoY5lDl1L7tIAXx
 
 Experimenting CPU environment on Google Cloud Platform (notebook and results uploaded to colab)
 
+https://colab.research.google.com/drive/1Y9-2_lAH9YzHl8H6vNbTV7rk8iKXb4oQ
+
 # Table of Contents
 * [Deep Learning Deployment](#dld)
     1. [Environmental info](#ei)
