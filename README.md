@@ -33,7 +33,7 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
 * Gpu experiment environment 
     
         - Ubuntu 18.04.5 LTS
-        - Cpu 2 cores Intel(R) Xeon(R) CPU @ 2.30GHz (some tests are 2.20GHz)
+        - Cpu 2 cores Intel(R) Xeon(R) CPU @ 2.30GHz
         - RAM 12GB
         - GPU Tesla K80    
     
@@ -65,7 +65,7 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
 * Easy to use: ONNX Runtime > OpenVINO >>> TVM
 
 <p align="center">
-    <img src="./onnxruntime/pytorch_onnx_inference_speed.png" width="500" height="500">
+    <img src="./cpp_speed_comparison.png" width="600" height="500">
 </p><br>    
     
 #### 2. GPU: Pytorch vs ONNX Runtime vs TensorRT vs TVM
@@ -75,7 +75,6 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
 * I have not tuned TVM on colab GPU environment yet due to too much time cost.
     
 #### 3. Mask-RCNN on CPU/GPU:
-* To save resources, I made cpu test on colab using just cpu runtime, and it's  slightly slower than the cpu than gpu runtime. (2.20GHz vs 2.30GHz)
 * Because Mask-RCNN conversion failed on TensorRT / OpenVINO, so just comparing the whole model on ONNX Runtime / Pytorch / TVM.
     * FPS on GPU:         
     * FPS on CPU: ONNX Runtime(0.15) > Pytorch (0.13) >>> untuned TVM (0.013)
@@ -104,8 +103,8 @@ Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in 
     Mask-RCNN: pytorch to tvm: torch 1.7.0 + torchvision 0.8.1<br>
     Efficientnet: pytorch to onnx: torch 1.9.0, opset_level=10 (11 failed)<br>
     Pytorch using old version(1.7.0) is slower than new version(1.9.0+cu102), FPS: 0.125 < 0.136<br>
-
-    
+* Sometimes export Pytorch models to Onnx may fail (Unable to cast from non-held to held instance (T& to Holder<T>)) => restart runtime resolve the problem.
+* Check lscpu before running test, like in colab, capability of cpu in cpu runtime is slightly lower than the one in gpu runtime, so some results between 2 runtime type might be confusing. (2.20GHz vs 2.30GHz)
 ## <a name="su">Summary
 * Choices of frameworks:
     1. Depend on device. (gpu/cpu, support fp16?, intel device using openvino and nvidia gpu using tensorRT)
