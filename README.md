@@ -2,7 +2,7 @@ Experimenting GPU/Mask-RCNN environment on:
 
 https://colab.research.google.com/drive/1JXzXEpR6_w5W1doFgUoY5lDl1L7tIAXx
 
-Experimenting CPU environment on Google Cloud Platform (see jupyter notebook in repo)
+Experimenting CPU environment on Google Cloud Platform (notebook and results uploaded to colab)
 
 # Table of Contents
 * [Deep Learning Deployment](#dld)
