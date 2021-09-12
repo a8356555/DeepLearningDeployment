@@ -50,6 +50,7 @@ https://colab.research.google.com/drive/1Y9-2_lAH9YzHl8H6vNbTV7rk8iKXb4oQ
         - TVM 0.8
     
 ## <a name="ta">Target
+* Find the best speed up approach for YushanChineseWordClassification project.
 * Have an overall understanding of multiple frameworks used for speeding up deployment and get familiar with their structure, eg. ONNX Runtime, TensorRT, TVM and Openvino.
 * Compare the inference speed of frameworks above.
 * Try to deploy models using C++ API.
@@ -119,11 +120,12 @@ https://colab.research.google.com/drive/1Y9-2_lAH9YzHl8H6vNbTV7rk8iKXb4oQ
     * Pytorch using old version(1.7.0) is slower than new version(1.9.0+cu102), FPS: 0.125 < 0.136
 * Sometimes export Pytorch models to Onnx may fail (Unable to cast from non-held to held instance (T& to Holder<T>)) => restart runtime resolve the problem.
 * Check lscpu before running test, like in colab, capability of cpu in cpu runtime is slightly lower than the one in gpu runtime, so some results between 2 runtime type might be confusing. (2.20GHz vs 2.30GHz)
+* Packages in older version might be slower.
 
 ## <a name="su">Summary
 * Choices of frameworks:
-    1. Depend on device. (GPU/CPU, support fp16?, intel CPU/GPU using OpenVINO and nvidia GPU using tensorRT)
+    1. Depend on devices. (GPU/CPU, support fp16?, intel CPU/GPU using OpenVINO and nvidia GPU using tensorRT)
     2. Depend on Time Budget. (TVM has great potential but takes a lot of time.).
-    3. Easy to use: ONNX Runtime > OpenVINO ~ TensorRT >>> TVM
+    3. Depend on models. Pytorch is the fastest on MaskRCNN so far.
+    4. Easy to use: ONNX Runtime > OpenVINO ~ TensorRT >>> TVM
         * ONNX Runtime on GPU is slow.
-    4. Packages in older version might be slower.
