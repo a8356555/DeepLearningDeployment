@@ -82,6 +82,10 @@ https://colab.research.google.com/drive/1Y9-2_lAH9YzHl8H6vNbTV7rk8iKXb4oQ
 * Untuned TVM is at most 1.2x faster than pytorch, so we can expect performance of tuned TVM.
 * ONNX Runtime is slower than pytorch, overhead?
 * I have not tuned TVM on colab GPU environment yet due to too much time cost.
+
+<p align="center">
+    <img src="./gpu_speed.png" width="600" height="500">
+</p><br>    
     
 #### 3. Mask-RCNN on CPU/GPU:
 * Because Mask-RCNN conversion failed on TensorRT / OpenVINO, so just comparing the whole model on ONNX Runtime / Pytorch / TVM.
